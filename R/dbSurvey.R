@@ -45,13 +45,14 @@ firstAsRowNames <- function(mat)
 }
 
 # function to convert levels to numeric or characters
-LtoN <- function(x) as.numeric(as.character(x))
-LtoC <- function(x) as.character(x)
+LtoN <- function(x) {as.numeric(as.character(x))}
+LtoC <- function(x) {as.character(x)}
 
 # when read empty cells are coded as NAs
 #' @export
 
-dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F) {
+dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
+  {
 
     # input a excel, but should eventually be a csv
     input = readxl::read_excel(inputPath, sheet = "dbInput")
@@ -302,4 +303,4 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F) {
     #write.csv(output, "output.csv")
     return(output)
 }
-dbSurvey()
+
