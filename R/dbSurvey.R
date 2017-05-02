@@ -36,7 +36,7 @@ LtoW <- function(db, size = 10000)
     return(dbtemp)
 }
 
-mat=categories
+
 firstAsRowNames <- function(mat)
 {
   mat=as.data.frame(mat)
