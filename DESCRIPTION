@@ -11,6 +11,5 @@ Imports:
     readxl,
     lubridate,
     plyr,
-    cellranger,
-    tibble
+    cellranger
 
