@@ -36,7 +36,6 @@ LtoW <- function(db, size = 10000)
     return(dbtemp)
 }
 
-
 firstAsRowNames <- function(mat)
 {
   mat=as.data.frame(mat)
