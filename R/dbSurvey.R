@@ -113,8 +113,7 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
                   sheet = 1
                 }
                 if (first)
-                  db = readxl::read_excel(LtoC(input[i, "path"]),
-                    sep = "", sheet = sheet)
+                  db = readxl::read_excel(LtoC(input[i, "path"]), sheet = sheet)
                 if (!first)
                   db = rbind(db, readxl::read_excel(paste("..\\", LtoC(input[i,
                     "path"]), sep = ""), sheet = sheet)[, colnames(db)])
