@@ -1,0 +1,383 @@
+"ID","path","state","category","varNames","varDepth","nbObs","nbLakes","nbDepths","nbYears","startYear","endYear"
+1,"CSI-LIMNO_DATA\DATA-lake\IA data\Iowa_lakes_chemistry_dataset.xlsx","IA","alkalinity","Total_Alkalinity as CaCO3 (mg/L)",NA,3459,131,1,10,2001,2011
+1,"CSI-LIMNO_DATA\DATA-lake\IA data\Iowa_lakes_chemistry_dataset.xlsx","IA","pH","pH",NA,3459,131,1,10,2001,2011
+1,"CSI-LIMNO_DATA\DATA-lake\IA data\Iowa_lakes_chemistry_dataset.xlsx","IA","conductivity","Conductivity (uS/cm)",NA,3437,131,1,10,2001,2011
+1,"CSI-LIMNO_DATA\DATA-lake\IA data\Iowa_lakes_chemistry_dataset.xlsx","IA","turbidity","Turbidity (NTU)",NA,3459,131,1,10,2001,2011
+1,"CSI-LIMNO_DATA\DATA-lake\IA data\Iowa_lakes_chemistry_dataset.xlsx","IA","hardness","Total_Nitrogen as N (mg/L); TKN (mg/L); NO2+NO3-N as N (mg/L); DOC (mg/L); Total_Alkalinity as CaCO3 (mg/L)",NA,3459,131,1,10,2001,2011
+1,"CSI-LIMNO_DATA\DATA-lake\IA data\Iowa_lakes_chemistry_dataset.xlsx","IA","temperature","Temperature ( C )",NA,3459,131,1,10,2001,2011
+2,"CSI-LIMNO_DATA\DATA-lake\IA data\Rathbun Lake\rathbun_lake_chem_final_stc.csv","IA","alkalinity","Alkalinity","Depth",49,1,1.73469387755102,5,2006,2011
+2,"CSI-LIMNO_DATA\DATA-lake\IA data\Rathbun Lake\rathbun_lake_chem_final_stc.csv","IA","turbidity","TURBIDTY","Depth",505,1,4.03,11,1997,2010
+3,"CSI-LIMNO_DATA\DATA-lake\IN lakes\IUSPEA All Data.xls","IN","alkalinity","Alk - epi (mg/L); Alk - hypo",NA,1755,496,1,25,1900,2010
+3,"CSI-LIMNO_DATA\DATA-lake\IN lakes\IUSPEA All Data.xls","IN","pH","pH - epi; pH - hypo",NA,1758,496,1,25,1900,2010
+3,"CSI-LIMNO_DATA\DATA-lake\IN lakes\IUSPEA All Data.xls","IN","conductivity","Conductivity - epi (umhos); Cond - Hypo",NA,1752,495,1,25,1900,2010
+3,"CSI-LIMNO_DATA\DATA-lake\IN lakes\IUSPEA All Data.xls","IN","hardness","SRP - epi (mg/L); Alk - epi (mg/L); NO3 - epi (mg/L); Total Phos - epi (mg/L); NH3 - epi (mg/L); TKN - epi (mg/L); Chlorophyll a (mg/m3)",NA,1764,496,1,25,1900,2010
+3,"CSI-LIMNO_DATA\DATA-lake\IN lakes\IUSPEA All Data.xls","IN","temperature","Temp-1; Temp-0",NA,1763,495,1,25,1900,2010
+3,"CSI-LIMNO_DATA\DATA-lake\IN lakes\IUSPEA All Data.xls","IN","DO","DO Saturation @ 5' (%); DO-2; DO-3; DO-4; DO-0; DO-1_5; DO-5; DO-6; DO-7; DO-8; DO-9; DO-10; DO-11; DO-12; DO-13; DO-14; DO-15; DO-16; DO-17; DO-18; DO-19; DO-20; DO-21; DO-22; DO-23; DO-24; DO-25; DO-26; DO-27; DO-28; DO-29; DO-30; DO-31; DO-32; DO-33; DO-34; DO-35",NA,1760,493,1,25,1900,2010
+4,"CSI-LIMNO_DATA\DATA-lake\IL data\VLMP Data\Merged Data\YearsMerged.csv","IL","alkalinity","Alkalinity",NA,1062,101,1,4,2008,2011
+4,"CSI-LIMNO_DATA\DATA-lake\IL data\VLMP Data\Merged Data\YearsMerged.csv","IL","temperature","Temperature",NA,2622,162,1,10,2001,2011
+5,"CSI-LIMNO_DATA\DATA-lake\CT data\CT_SKO\CT_lakes_chemistry_dataset.csv","CT","alkalinity","Alkalinity","Sample_depth",1348,60,3.31,32,1970,2006
+5,"CSI-LIMNO_DATA\DATA-lake\CT data\CT_SKO\CT_lakes_chemistry_dataset.csv","CT","pH","pH","Sample_depth",2716,114,2.76,38,1938,2006
+5,"CSI-LIMNO_DATA\DATA-lake\CT data\CT_SKO\CT_lakes_chemistry_dataset.csv","CT","conductivity","Conductivity","Sample_depth",3976,99,3.25,32,1972,2006
+5,"CSI-LIMNO_DATA\DATA-lake\CT data\CT_SKO\CT_lakes_chemistry_dataset.csv","CT","turbidity","Turbidity","Sample_depth",1065,36,3.33,24,1970,2004
+5,"CSI-LIMNO_DATA\DATA-lake\CT data\CT_SKO\CT_lakes_chemistry_dataset.csv","CT","temperature","Temperature","Sample_depth",9346,144,12.8,38,1937,2006
+5,"CSI-LIMNO_DATA\DATA-lake\CT data\CT_SKO\CT_lakes_chemistry_dataset.csv","CT","DO","DO","Sample_depth",9176,145,14.2,38,1937,2006
+6,"CSI-LIMNO_DATA\DATA-lake\MA data\MassDEPData(FINISHED)\Chem Samples.csv","MA","alkalinity","alk; alkq","sdepth1",344,76,1.88118811881188,6,1995,2001
+6,"CSI-LIMNO_DATA\DATA-lake\MA data\MassDEPData(FINISHED)\Chem Samples.csv","MA","conductivity","speccond","sdepth1",2,2,1,2,1995,1998
+6,"CSI-LIMNO_DATA\DATA-lake\MA data\MassDEPData(FINISHED)\Chem Samples.csv","MA","turbidity","turb","sdepth1",13,5,1.46153846153846,3,1995,1998
+6,"CSI-LIMNO_DATA\DATA-lake\MA data\MassDEPData(FINISHED)\Chem Samples.csv","MA","hardness","hard","sdepth1",25,9,1.16,4,1995,2001
+7,"CSI-LIMNO_DATA\DATA-lake\MA data\MassDEPData(FINISHED)\Sensor Data.csv","MA","pH","ph","depth",9589,765,1,18,1995,2012
+7,"CSI-LIMNO_DATA\DATA-lake\MA data\MassDEPData(FINISHED)\Sensor Data.csv","MA","conductivity","spcond; spcondss","depth",9567,762,1,18,1995,2012
+7,"CSI-LIMNO_DATA\DATA-lake\MA data\MassDEPData(FINISHED)\Sensor Data.csv","MA","temperature","temp; tempss","depth",9607,767,1,18,1995,2012
+8,"CSI-LIMNO_DATA\DATA-lake\MA data\MWSA- Reservoirs (Finished)\Quabbin\Quabbin Reservoir Data-RAW.xlsx","MA","alkalinity","STDALK; EPAALK; Ca++",NA,2598,12,1,27,1987,2013
+8,"CSI-LIMNO_DATA\DATA-lake\MA data\MWSA- Reservoirs (Finished)\Quabbin\Quabbin Reservoir Data-RAW.xlsx","MA","pH","pH",NA,2092,12,1,20,1987,2007
+8,"CSI-LIMNO_DATA\DATA-lake\MA data\MWSA- Reservoirs (Finished)\Quabbin\Quabbin Reservoir Data-RAW.xlsx","MA","conductivity","SPCOND",NA,1602,10,1,19,1987,2005
+8,"CSI-LIMNO_DATA\DATA-lake\MA data\MWSA- Reservoirs (Finished)\Quabbin\Quabbin Reservoir Data-RAW.xlsx","MA","turbidity","TURB",NA,2576,12,1,27,1987,2013
+8,"CSI-LIMNO_DATA\DATA-lake\MA data\MWSA- Reservoirs (Finished)\Quabbin\Quabbin Reservoir Data-RAW.xlsx","MA","hardness","Ca++",NA,174,9,1,4,2010,2013
+8,"CSI-LIMNO_DATA\DATA-lake\MA data\MWSA- Reservoirs (Finished)\Quabbin\Quabbin Reservoir Data-RAW.xlsx","MA","temperature","TEMPC",NA,2032,10,1,19,1987,2005
+9,"CSI-LIMNO_DATA\DATA-lake\MA data\MWSA- Reservoirs (Finished)\Wachusetts\Wachusett Reservoir nutrients 1998-2013.csv","MA","alkalinity","RESULT.ALKALINITY; RESULT.Alkalinity",NA,387,8,1,12,1998,2009
+10,"CSI-LIMNO_DATA\DATA-lake\CT data\CT_ENH\CT_Chemistry_finished\LAKE GRAB CHEM DATA_11142011.csv","CT","alkalinity","value.Alkalinity; value.ANC acid neutralizing capacity; value.Hardness, Total (as CaCO3)","value.Total Depth",290,69,1,11,1999,2009
+10,"CSI-LIMNO_DATA\DATA-lake\CT data\CT_ENH\CT_Chemistry_finished\LAKE GRAB CHEM DATA_11142011.csv","CT","pH","value.pH lab; value.pH","value.Total Depth",133,59,1,10,1999,2008
+10,"CSI-LIMNO_DATA\DATA-lake\CT data\CT_ENH\CT_Chemistry_finished\LAKE GRAB CHEM DATA_11142011.csv","CT","conductivity","value.conductivity","value.Total Depth",15,13,1,1,2007,2007
+10,"CSI-LIMNO_DATA\DATA-lake\CT data\CT_ENH\CT_Chemistry_finished\LAKE GRAB CHEM DATA_11142011.csv","CT","turbidity","value.Turbidity","value.Total Depth",278,65,1,10,1999,2009
+10,"CSI-LIMNO_DATA\DATA-lake\CT data\CT_ENH\CT_Chemistry_finished\LAKE GRAB CHEM DATA_11142011.csv","CT","hardness","value.Hardness; value.Calcium, Total; value.Magnesium, Total; value.Hardness, Total (as CaCO3)","value.Total Depth",271,67,1,11,1999,2009
+11,"CSI-LIMNO_DATA\DATA-lake\ME data\Acadia (Finished)\Acadia post2006 Chem.xlsx","ME","pH","pH; pH_Method","Sample depth_m",169,20,1,6,2006,2011
+11,"CSI-LIMNO_DATA\DATA-lake\ME data\Acadia (Finished)\Acadia post2006 Chem.xlsx","ME","conductivity","SpCond_uS/cm","Sample depth_m",75,12,1,6,2006,2011
+11,"CSI-LIMNO_DATA\DATA-lake\ME data\Acadia (Finished)\Acadia post2006 Chem.xlsx","ME","hardness","Mg_ueq/L","Sample depth_m",67,10,1,6,2006,2011
+11,"CSI-LIMNO_DATA\DATA-lake\ME data\Acadia (Finished)\Acadia post2006 Chem.xlsx","ME","temperature","SurfaceTemp_C","Sample depth_m",209,20,1,6,2006,2011
+12,"CSI-LIMNO_DATA\DATA-lake\ME data\Acadia (Finished)\Acadia pre2006 Chem.xlsx","ME","pH","pH_Method; pH","Sample depth_m",162,18,2.02970297029703,19,1971,2001
+12,"CSI-LIMNO_DATA\DATA-lake\ME data\Acadia (Finished)\Acadia pre2006 Chem.xlsx","ME","conductivity","SpCond_uS/cm","Sample depth_m",205,18,1.75,21,1971,2005
+12,"CSI-LIMNO_DATA\DATA-lake\ME data\Acadia (Finished)\Acadia pre2006 Chem.xlsx","ME","hardness","Mg_ueq/L","Sample depth_m",85,17,1,13,1983,2005
+12,"CSI-LIMNO_DATA\DATA-lake\ME data\Acadia (Finished)\Acadia pre2006 Chem.xlsx","ME","temperature","SurfaceTemp_C","Sample depth_m",298,18,1.9,21,1971,2003
+13,"CSI-LIMNO_DATA\DATA-lake\ME data\DEP (Finished)\AllCatAn3_12.csv","ME","alkalinity","Ca..mg.L.; Na..mg.L.; Cl..ueq.L.; SO4..ueq.L.; ANC.ueq.L","Depth.m.",1964,1426,1.01923076923077,16,1996,2011
+13,"CSI-LIMNO_DATA\DATA-lake\ME data\DEP (Finished)\AllCatAn3_12.csv","ME","conductivity","SPCOND.uS.cm.","Depth.m.",909,704,1.04,9,2003,2011
+13,"CSI-LIMNO_DATA\DATA-lake\ME data\DEP (Finished)\AllCatAn3_12.csv","ME","hardness","Ca..mg.L.; K..mg.L.; Na..mg.L.; Mg..mg.L.; DOC..mg.L.; Si..mg.L.; TotalN.mg.L.; NH4..mg.L.","Depth.m.",1964,1426,1.01869158878505,16,1996,2011
+14,"CSI-LIMNO_DATA\DATA-lake\ME data\DEP (Finished)\DEPPRO.xlsx","ME","alkalinity","ALK; ALKMETH; ALKLAB","DEPTH",37667,847,2.50980392156863,45,1940,2011
+14,"CSI-LIMNO_DATA\DATA-lake\ME data\DEP (Finished)\DEPPRO.xlsx","ME","pH","PH","DEPTH",37667,847,2.54,45,1940,2011
+14,"CSI-LIMNO_DATA\DATA-lake\ME data\DEP (Finished)\DEPPRO.xlsx","ME","conductivity","CONDUCT; CONDMETH; CONDLAB","DEPTH",37667,847,2.50980392156863,45,1940,2011
+15,"CSI-LIMNO_DATA\DATA-lake\ME data\DEP (Finished)\LAYPRO.xlsx","ME","temperature","TEMP","DEPTH",432586,791,10.3,46,1940,2011
+15,"CSI-LIMNO_DATA\DATA-lake\ME data\DEP (Finished)\LAYPRO.xlsx","ME","DO","OXYGEN","DEPTH",432586,791,10.3,46,1940,2011
+16,"CSI-LIMNO_DATA\DATA-lake\MI data\Cheruvelil PhD lakes(finished)\mi_msu_cheruvelil_final_stc.csv","MI","alkalinity","AlkmgLCaCO3","EpiDepth_m",54,52,1,2,2001,2002
+17,"CSI-LIMNO_DATA\DATA-lake\MI data\DEQ-historical data (finished)\MIDEQ_Horizontal_ForMetadata_ForPat_2_26_2013-EDITED.xlsx","MI","alkalinity","alkalinity_total","depth",3314,555,1,31,1950,1997
+17,"CSI-LIMNO_DATA\DATA-lake\MI data\DEQ-historical data (finished)\MIDEQ_Horizontal_ForMetadata_ForPat_2_26_2013-EDITED.xlsx","MI","pH","ph","depth",7940,547,1,32,1950,1997
+17,"CSI-LIMNO_DATA\DATA-lake\MI data\DEQ-historical data (finished)\MIDEQ_Horizontal_ForMetadata_ForPat_2_26_2013-EDITED.xlsx","MI","conductivity","specific_conductance_field; specific_conductance","depth",5896,486,1,18,1980,1997
+17,"CSI-LIMNO_DATA\DATA-lake\MI data\DEQ-historical data (finished)\MIDEQ_Horizontal_ForMetadata_ForPat_2_26_2013-EDITED.xlsx","MI","turbidity","turbidity","depth",2034,473,1,11,1973,1983
+17,"CSI-LIMNO_DATA\DATA-lake\MI data\DEQ-historical data (finished)\MIDEQ_Horizontal_ForMetadata_ForPat_2_26_2013-EDITED.xlsx","MI","hardness","calcium_total; calcium_dissolved","depth",1534,397,1,19,1974,1997
+17,"CSI-LIMNO_DATA\DATA-lake\MI data\DEQ-historical data (finished)\MIDEQ_Horizontal_ForMetadata_ForPat_2_26_2013-EDITED.xlsx","MI","DO","oxygen_dissolved","depth",9912,561,1,31,1950,1997
+18,"CSI-LIMNO_DATA\DATA-lake\MI data\Hamilton-KBS lake database (finished)\Hamilton_Data_To_Use\Hamilton_WithGullLakeLake_10_9_2012.xlsx","MI","alkalinity","ad: Cl (mg/L); af: SO4 (mg/L); ag: Alkal (ueq/L); ah: Ca-AA (mg/L); aj: Na-AA (mg/L); bv:Ca-IC (mg/L); bx: Na-IC (mg/L)","bh: ZP_depth (m)",1110,134,1.16981132075472,17,1996,2012
+18,"CSI-LIMNO_DATA\DATA-lake\MI data\Hamilton-KBS lake database (finished)\Hamilton_Data_To_Use\Hamilton_WithGullLakeLake_10_9_2012.xlsx","MI","pH","ap: pH- field; ao: pH - lab","bh: ZP_depth (m)",1092,135,1,17,1996,2012
+18,"CSI-LIMNO_DATA\DATA-lake\MI data\Hamilton-KBS lake database (finished)\Hamilton_Data_To_Use\Hamilton_WithGullLakeLake_10_9_2012.xlsx","MI","hardness","ae: NO3-N (mg/L); ad: Cl (mg/L); af: SO4 (mg/L); aw: O2 (mg/L); al: Si (mg/L); ah: Ca-AA (mg/L); aj: Na-AA (mg/L); ak: K-AA (mg/L); ai: Mg-AA (mg/L); aq: DOC (mg/L); bq: Br (mg/L); bp: F (mg/L); bv:Ca-IC (mg/L); bw:Mg-IC (mg/L); bx: Na-IC (mg/L); by: K-IC (mg/L); br: FeFilt (mg/L); be: TSS (mg/L); bu: TN (mg/L)","bh: ZP_depth (m)",1110,134,1.16101694915254,17,1996,2012
+18,"CSI-LIMNO_DATA\DATA-lake\MI data\Hamilton-KBS lake database (finished)\Hamilton_Data_To_Use\Hamilton_WithGullLakeLake_10_9_2012.xlsx","MI","temperature","av: Temp(degrees C)","bh: ZP_depth (m)",1072,128,1.33,16,1997,2012
+18,"CSI-LIMNO_DATA\DATA-lake\MI data\Hamilton-KBS lake database (finished)\Hamilton_Data_To_Use\Hamilton_WithGullLakeLake_10_9_2012.xlsx","MI","DO","aw: O2 (mg/L); ax: O2%","bh: ZP_depth (m)",1033,128,1,16,1997,2012
+19,"CSI-LIMNO_DATA\DATA-lake\MI data\LTBB tribe data (finished)\mi_ltbb_chem_all_stc.csv","MI","pH","pH",NA,1937,11,1,19,1959,2095
+19,"CSI-LIMNO_DATA\DATA-lake\MI data\LTBB tribe data (finished)\mi_ltbb_chem_all_stc.csv","MI","conductivity","SpCond",NA,1932,11,1,19,1959,2095
+19,"CSI-LIMNO_DATA\DATA-lake\MI data\LTBB tribe data (finished)\mi_ltbb_chem_all_stc.csv","MI","temperature","Temp",NA,1936,11,1,19,1959,2095
+19,"CSI-LIMNO_DATA\DATA-lake\MI data\LTBB tribe data (finished)\mi_ltbb_chem_all_stc.csv","MI","DO","DO",NA,1935,11,1,19,1959,2095
+20,"CSI-LIMNO_DATA\DATA-lake\MI data\Martin_Soranno_2006 study (finished)\MARTIN-DATA-FINAL-7-26-05-FOR CSI.xls","MI","alkalinity","ALK_ueqL; Ca (mg/L); Na (mg/L); Cl (mg/L); SO4 (mg/L)",NA,71,68,1,1,2003,2003
+20,"CSI-LIMNO_DATA\DATA-lake\MI data\Martin_Soranno_2006 study (finished)\MARTIN-DATA-FINAL-7-26-05-FOR CSI.xls","MI","pH","pH_1m_field; pH_lab",NA,71,68,1,1,2003,2003
+20,"CSI-LIMNO_DATA\DATA-lake\MI data\Martin_Soranno_2006 study (finished)\MARTIN-DATA-FINAL-7-26-05-FOR CSI.xls","MI","conductivity","Cond_1m",NA,71,68,1,1,2003,2003
+20,"CSI-LIMNO_DATA\DATA-lake\MI data\Martin_Soranno_2006 study (finished)\MARTIN-DATA-FINAL-7-26-05-FOR CSI.xls","MI","turbidity","Turb_1m",NA,67,65,1,1,2003,2003
+20,"CSI-LIMNO_DATA\DATA-lake\MI data\Martin_Soranno_2006 study (finished)\MARTIN-DATA-FINAL-7-26-05-FOR CSI.xls","MI","hardness","Ca (mg/L); Mg (mg/L); Na (mg/L); K (mg/L); Cl (mg/L); NO3-N (mg/L); SO4 (mg/L); Si (mg/L)",NA,71,68,1,1,2003,2003
+21,"CSI-LIMNO_DATA\DATA-lake\MI data\MiCorps(finished)\MiCorps\MI_MiCORPS_profile_finished\micorps_results_27NOV12_profile.csv","MI","conductivity","Weather_Conditions; Unusual_Conditions","Depth_feet",55870,127,1,13,2000,2012
+21,"CSI-LIMNO_DATA\DATA-lake\MI data\MiCorps(finished)\MiCorps\MI_MiCORPS_profile_finished\micorps_results_27NOV12_profile.csv","MI","temperature","Temp_.C","Depth_feet",55870,127,1,13,2000,2012
+21,"CSI-LIMNO_DATA\DATA-lake\MI data\MiCorps(finished)\MiCorps\MI_MiCORPS_profile_finished\micorps_results_27NOV12_profile.csv","MI","DO","DO_._air_saturation","Depth_feet",55870,127,1,13,2000,2012
+22,"CSI-LIMNO_DATA\DATA-lake\MI data\Paul Lake (finished)\Paul Lake master.xlsx","MI","pH","pH; pH calc'd",NA,85,1,1,6,2001,2007
+22,"CSI-LIMNO_DATA\DATA-lake\MI data\Paul Lake (finished)\Paul Lake master.xlsx","MI","DIC","DIC(mg/L)",NA,208,1,1,16,1991,2007
+22,"CSI-LIMNO_DATA\DATA-lake\MI data\Paul Lake (finished)\Paul Lake master.xlsx","MI","hardness","DOC(mg/L); DIC(mg/L)",NA,263,1,1,20,1988,2007
+22,"CSI-LIMNO_DATA\DATA-lake\MI data\Paul Lake (finished)\Paul Lake master.xlsx","MI","temperature","wtemp",NA,386,1,1,24,1984,2007
+23,"CSI-LIMNO_DATA\DATA-lake\MI data\Platte Lake (finished)\Platte lakedata_19dec12.csv","MI","alkalinity","Measure.Alk; Measure.Ca",NA,351,4,1,18,1982,2009
+23,"CSI-LIMNO_DATA\DATA-lake\MI data\Platte Lake (finished)\Platte lakedata_19dec12.csv","MI","hardness","Measure.Ca",NA,237,2,1,15,1982,2008
+24,"CSI-LIMNO_DATA\DATA-lake\MI data\Platte Lake (finished)\Platte probedata_19dec12.csv","MI","pH","pH","DepthM",3405,5,6.94,20,1982,2012
+24,"CSI-LIMNO_DATA\DATA-lake\MI data\Platte Lake (finished)\Platte probedata_19dec12.csv","MI","conductivity","Cond","DepthM",1506,2,8,10,2003,2012
+24,"CSI-LIMNO_DATA\DATA-lake\MI data\Platte Lake (finished)\Platte probedata_19dec12.csv","MI","temperature","TempC","DepthM",4126,5,6.94,25,1982,2012
+24,"CSI-LIMNO_DATA\DATA-lake\MI data\Platte Lake (finished)\Platte probedata_19dec12.csv","MI","DO","DO","DepthM",4103,5,7,24,1989,2012
+25,"CSI-LIMNO_DATA\DATA-lake\MI data\Sonar lakes\SONAR water chem data-final.xlsx","MI","temperature","Surf-temp","Epi_Depth",78,8,1,3,1998,2000
+25,"CSI-LIMNO_DATA\DATA-lake\MI data\Sonar lakes\SONAR water chem data-final.xlsx","MI","DO","HYPO-O2","Epi_Depth",48,8,1,3,1998,2000
+26,"CSI-LIMNO_DATA\DATA-lake\MI data\Tip of the Mitt(finished)\Tip of the Mitt Comp Lake Monit Program data KSC 24OCT12.csv","MI","alkalinity","Alkalinity..mg.l.","Sample.Depth..meters.",14,5,2.85714285714286,1,1987,1987
+26,"CSI-LIMNO_DATA\DATA-lake\MI data\Tip of the Mitt(finished)\Tip of the Mitt Comp Lake Monit Program data KSC 24OCT12.csv","MI","pH","pH","Sample.Depth..meters.",823,104,2.8,10,1987,2010
+26,"CSI-LIMNO_DATA\DATA-lake\MI data\Tip of the Mitt(finished)\Tip of the Mitt Comp Lake Monit Program data KSC 24OCT12.csv","MI","conductivity","Specific.Conductivity..uS.cm2.","Sample.Depth..meters.",831,104,2.81,10,1987,2010
+26,"CSI-LIMNO_DATA\DATA-lake\MI data\Tip of the Mitt(finished)\Tip of the Mitt Comp Lake Monit Program data KSC 24OCT12.csv","MI","hardness","Dissolved.Oxygen..mg.l.; Chloride..mg.l.; Alkalinity..mg.l.","Sample.Depth..meters.",850,104,2.84313725490196,11,1987,2010
+26,"CSI-LIMNO_DATA\DATA-lake\MI data\Tip of the Mitt(finished)\Tip of the Mitt Comp Lake Monit Program data KSC 24OCT12.csv","MI","temperature","Temperature.C.","Sample.Depth..meters.",800,66,2.85,12,1987,2007
+26,"CSI-LIMNO_DATA\DATA-lake\MI data\Tip of the Mitt(finished)\Tip of the Mitt Comp Lake Monit Program data KSC 24OCT12.csv","MI","DO","Dissolved.Oxygen..mg.l.","Sample.Depth..meters.",850,104,2.85,11,1987,2010
+27,"CSI-LIMNO_DATA\DATA-lake\MI data\Tip of the Mitt(finished)\Tip of the Mitt Volunteer Lake Monit Program data KSC 24OCT12.csv","MI","temperature","Air.Temp..Co.; Water.Temp..C..",NA,130,1,1,10,1989,2010
+29,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Center Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,42,1,1,1,Inf,-Inf
+29,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Center Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,42,1,1,1,Inf,-Inf
+29,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Center Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,42,1,1,1,Inf,-Inf
+29,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Center Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,42,1,1,1,Inf,-Inf
+30,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Chevans Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,43,1,1,1,Inf,-Inf
+30,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Chevans Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,42,1,1,1,Inf,-Inf
+30,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Chevans Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,43,1,1,1,Inf,-Inf
+30,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Chevans Lake nutrients lab analysis.xlsx","MN","hardness","T_Hard_mgL; Mg_mgL",NA,43,1,1,1,Inf,-Inf
+31,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Cuffs Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,36,1,1,1,Inf,-Inf
+31,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Cuffs Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,35,1,1,1,Inf,-Inf
+31,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Cuffs Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,36,1,1,1,Inf,-Inf
+31,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Cuffs Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,36,1,1,1,Inf,-Inf
+32,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Dutchman Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,42,1,1,1,Inf,-Inf
+32,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Dutchman Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,41,1,1,1,Inf,-Inf
+32,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Dutchman Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,42,1,1,1,Inf,-Inf
+32,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Dutchman Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,42,1,1,1,Inf,-Inf
+33,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Helmer_Nelson nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,42,1,1,1,Inf,-Inf
+33,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Helmer_Nelson nutrients lab analysis.xlsx","MN","pH","pH_units",NA,41,1,1,1,Inf,-Inf
+33,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Helmer_Nelson nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,42,1,1,1,Inf,-Inf
+33,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Helmer_Nelson nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,42,1,1,1,Inf,-Inf
+34,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Little Lake nutrients lab analysis.xlsx","MN","alkalinity","AlkmgL",NA,36,1,1,1,Inf,-Inf
+34,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Little Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,35,1,1,1,Inf,-Inf
+34,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Little Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,36,1,1,1,Inf,-Inf
+34,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Little Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,36,1,1,1,Inf,-Inf
+35,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Loon Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,36,1,1,1,Inf,-Inf
+35,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Loon Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,35,1,1,1,Inf,-Inf
+35,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Loon Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,35,1,1,1,Inf,-Inf
+35,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Loon Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,36,1,1,1,Inf,-Inf
+36,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Mt Maud Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,43,1,1,1,Inf,-Inf
+36,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Mt Maud Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,42,1,1,1,Inf,-Inf
+36,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Mt Maud Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,43,1,1,1,Inf,-Inf
+36,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Mt Maud Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,43,1,1,1,Inf,-Inf
+37,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\North Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,37,1,1,1,Inf,-Inf
+37,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\North Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,36,1,1,1,Inf,-Inf
+37,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\North Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,37,1,1,1,Inf,-Inf
+37,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\North Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,37,1,1,1,Inf,-Inf
+38,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Swamp Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,42,1,1,1,Inf,-Inf
+38,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Swamp Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,40,1,1,1,Inf,-Inf
+38,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Swamp Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,42,1,1,1,Inf,-Inf
+38,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Swamp Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,42,1,1,1,Inf,-Inf
+39,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Swede Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,36,1,1,1,Inf,-Inf
+39,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Swede Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,35,1,1,1,Inf,-Inf
+39,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Swede Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,36,1,1,1,Inf,-Inf
+39,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Swede Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,36,1,1,1,Inf,-Inf
+40,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Taylor Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,37,1,1,1,Inf,-Inf
+40,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Taylor Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,36,1,1,1,Inf,-Inf
+40,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Taylor Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,37,1,1,1,Inf,-Inf
+40,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Taylor Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,37,1,1,1,Inf,-Inf
+41,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Teal Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,36,1,1,1,Inf,-Inf
+41,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Teal Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,35,1,1,1,Inf,-Inf
+41,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Teal Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,36,1,1,1,Inf,-Inf
+41,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Teal Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,35,1,1,1,Inf,-Inf
+42,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Trout Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,37,1,1,1,Inf,-Inf
+42,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Trout Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,36,1,1,1,Inf,-Inf
+42,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Trout Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,37,1,1,1,Inf,-Inf
+42,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Trout Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,37,1,1,1,Inf,-Inf
+43,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Turtle Lake nutrients lab analysis.xlsx","MN","alkalinity","Alk_mgL",NA,42,1,1,1,Inf,-Inf
+43,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Turtle Lake nutrients lab analysis.xlsx","MN","pH","pH_units",NA,41,1,1,1,Inf,-Inf
+43,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Turtle Lake nutrients lab analysis.xlsx","MN","conductivity","SPC_umhoscm",NA,42,1,1,1,Inf,-Inf
+43,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake chemistry data-ORIGINAL\Turtle Lake nutrients lab analysis.xlsx","MN","hardness","Hard_mgL; Mg_mgL",NA,42,1,1,1,Inf,-Inf
+44,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Center Lake field data.xlsx","MN","pH","PH_UNITS","DEPTH_ft",548,1,16,1,Inf,-Inf
+44,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Center Lake field data.xlsx","MN","conductivity","SPCOND_uS_cm","DEPTH_ft",548,1,16,1,Inf,-Inf
+44,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Center Lake field data.xlsx","MN","turbidity","TURB_NTU","DEPTH_ft",474,1,16,1,Inf,-Inf
+44,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Center Lake field data.xlsx","MN","temperature","TEMP_C","DEPTH_ft",548,1,16,1,Inf,-Inf
+44,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Center Lake field data.xlsx","MN","DO","DO_mgL","DEPTH_ft",548,1,16,1,Inf,-Inf
+45,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Chevans Lake field data.xlsx","MN","pH","PH_UNITS","DEPTH_ft",389,1,9,1,Inf,-Inf
+45,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Chevans Lake field data.xlsx","MN","conductivity","SPCOND_uS_cm","DEPTH_ft",389,1,9,1,Inf,-Inf
+45,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Chevans Lake field data.xlsx","MN","turbidity","TURB_NTU","DEPTH_ft",283,1,8,1,Inf,-Inf
+45,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Chevans Lake field data.xlsx","MN","temperature","TEMP_C","DEPTH_ft",389,1,9,1,Inf,-Inf
+45,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Chevans Lake field data.xlsx","MN","DO","DO_mgL","DEPTH_ft",388,1,9,1,Inf,-Inf
+46,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Dutchman Lake field data.xlsx","MN","pH","PH_UNITS","DEPTH_ft",567,1,18,1,Inf,-Inf
+46,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Dutchman Lake field data.xlsx","MN","conductivity","SPCOND_uS_cm","DEPTH_ft",567,1,18,1,Inf,-Inf
+46,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Dutchman Lake field data.xlsx","MN","turbidity","TURB_NTU","DEPTH_ft",450,1,15,1,Inf,-Inf
+46,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Dutchman Lake field data.xlsx","MN","temperature","TEMP_C","DEPTH_ft",567,1,18,1,Inf,-Inf
+46,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Dutchman Lake field data.xlsx","MN","DO","DO_mgL","DEPTH_ft",555,1,18,1,Inf,-Inf
+47,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Helmer_Nelson Pond field data.xlsx","MN","pH","PH_UNITS","DEPTH_ft",454,1,14,1,Inf,-Inf
+47,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Helmer_Nelson Pond field data.xlsx","MN","conductivity","SPCOND_uS_cm","DEPTH_ft",454,1,14,1,Inf,-Inf
+47,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Helmer_Nelson Pond field data.xlsx","MN","turbidity","TURB_NTU","DEPTH_ft",401,1,13,1,Inf,-Inf
+47,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Helmer_Nelson Pond field data.xlsx","MN","temperature","TEMP_C","DEPTH_ft",455,1,14,1,Inf,-Inf
+47,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Helmer_Nelson Pond field data.xlsx","MN","DO","DO_mgL","DEPTH_ft",455,1,14,1,Inf,-Inf
+48,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Mt Maud Lake field data.xlsx","MN","pH","PH_UNITS","DEPTH_ft",546,1,14,1,Inf,-Inf
+48,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Mt Maud Lake field data.xlsx","MN","conductivity","SPCOND_uS_cm","DEPTH_ft",546,1,14,1,Inf,-Inf
+48,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Mt Maud Lake field data.xlsx","MN","turbidity","TURB_NTU","DEPTH_ft",471,1,12,1,Inf,-Inf
+48,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Mt Maud Lake field data.xlsx","MN","temperature","TEMP_C","DEPTH_ft",546,1,14,1,Inf,-Inf
+48,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Mt Maud Lake field data.xlsx","MN","DO","DO_mgL","DEPTH_ft",543,1,14,1,Inf,-Inf
+49,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Swede Lake field data.xlsx","MN","pH","PH_UNITS","DEPTH_ft",219,1,10,1,Inf,-Inf
+49,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Swede Lake field data.xlsx","MN","conductivity","SPCOND_uS_cm","DEPTH_ft",219,1,10,1,Inf,-Inf
+49,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Swede Lake field data.xlsx","MN","turbidity","TURB_NTU","DEPTH_ft",164,1,8,1,Inf,-Inf
+49,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Swede Lake field data.xlsx","MN","temperature","TEMP_C","DEPTH_ft",219,1,10,1,Inf,-Inf
+49,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Swede Lake field data.xlsx","MN","DO","DO_mgL","DEPTH_ft",209,1,10,1,Inf,-Inf
+50,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Turtle Lake field data.xlsx","MN","pH","PH_UNITS","DEPTH_ft",450,1,20,1,Inf,-Inf
+50,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Turtle Lake field data.xlsx","MN","conductivity","SPCOND_uS_cm","DEPTH_ft",450,1,20,1,Inf,-Inf
+50,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Turtle Lake field data.xlsx","MN","turbidity","TURB_NTU","DEPTH_ft",406,1,19,1,Inf,-Inf
+50,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Turtle Lake field data.xlsx","MN","temperature","TEMP_C","DEPTH_ft",450,1,20,1,Inf,-Inf
+50,"CSI-LIMNO_DATA\DATA-lake\MN data\Grand Portage Tribe data\lake probe data-ORIGINAL\Turtle Lake field data.xlsx","MN","DO","DO_mgL","DEPTH_ft",442,1,19,1,Inf,-Inf
+51,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\MPCA_Lake_Monitoring_Program_Project.csv","MN","alkalinity","RESULT.Alkalinity, total as CaCO3; RESULT.Sulfate as SO4; RESULT.Hardness, Ca, Mg as CaCO3; RESULT.Calcium as CaCO3; RESULT.Magnesium as CaCO3; RESULT.Calcium carbonate as CaCO3; RESULT.Bicarbonate as CaCO3","RESULT.Depth",9639,2201,1,60,1926,1998
+51,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\MPCA_Lake_Monitoring_Program_Project.csv","MN","pH","RESULT.pH","RESULT.Depth",12031,2337,1,53,1927,1998
+51,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\MPCA_Lake_Monitoring_Program_Project.csv","MN","conductivity","RESULT.Specific conductance; RESULT.Biochemical oxygen demand, standard conditions; RESULT.Carbonaceous biochemical oxygen demand, standard conditions; RESULT.Stream condition (text)","RESULT.Depth",10103,1917,1,33,1962,1998
+51,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\MPCA_Lake_Monitoring_Program_Project.csv","MN","turbidity","RESULT.Turbidity","RESULT.Depth",5500,1134,1,42,1949,1998
+51,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\MPCA_Lake_Monitoring_Program_Project.csv","MN","hardness","RESULT.Hardness, Ca, Mg as CaCO3; RESULT.Calcium as CaCO3; RESULT.Magnesium as CaCO3; RESULT.Magnesium; RESULT.Calcium; RESULT.Calcium carbonate as CaCO3","RESULT.Depth",2326,919,1,39,1951,1998
+51,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\MPCA_Lake_Monitoring_Program_Project.csv","MN","temperature","RESULT.Temperature, water","RESULT.Depth",12937,2172,1,55,1927,1998
+51,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\MPCA_Lake_Monitoring_Program_Project.csv","MN","DO","RESULT.Dissolved oxygen (DO); RESULT.Dissolved oxygen saturation; RESULT.Biochemical oxygen demand, standard conditions; RESULT.Chemical oxygen demand; RESULT.Carbonaceous biochemical oxygen demand, standard conditions; RESULT.Carbonaceous biochemical oxygen demand, non-standard; RESULT.Dissolved oxygen uptake","RESULT.Depth",12178,2065,1,56,1927,1998
+52,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\Sentinel_Lakes_Monitoring_Project.csv","MN","alkalinity","RESULT.Alkalinity, total as CaCO3; RESULT.Sulfate as SO4; RESULT.Calcium as CaCO3; RESULT.Magnesium as CaCO3",NA,329,33,1,4,2008,2011
+52,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\Sentinel_Lakes_Monitoring_Project.csv","MN","pH","RESULT.pH",NA,518,38,1,4,2008,2011
+52,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\Sentinel_Lakes_Monitoring_Project.csv","MN","conductivity","RESULT.Specific conductance",NA,520,38,1,4,2008,2011
+52,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\Sentinel_Lakes_Monitoring_Project.csv","MN","hardness","RESULT.Magnesium; RESULT.Calcium; RESULT.Calcium as CaCO3; RESULT.Magnesium as CaCO3",NA,211,27,1,4,2008,2011
+52,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\Sentinel_Lakes_Monitoring_Project.csv","MN","temperature","RESULT.Temperature, water",NA,1126,53,1,4,2008,2011
+52,"CSI-LIMNO_DATA\DATA-lake\MN data\MPCA_chemistry\CSILimnoData\Sentinel_Lakes_Monitoring_Project.csv","MN","DO","RESULT.Dissolved oxygen (DO); RESULT.Dissolved oxygen saturation",NA,1129,53,1,4,2008,2011
+55,"CSI-LIMNO_DATA\DATA-lake\MN data\USGS_SHAEP_longterm\Shingobee_Lake_profile_data.xlsx","MN","pH","pH","Depth (m)",3440,1,12,22,1989,2010
+55,"CSI-LIMNO_DATA\DATA-lake\MN data\USGS_SHAEP_longterm\Shingobee_Lake_profile_data.xlsx","MN","conductivity","Cond (µS/cm)","Depth (m)",3465,1,12,22,1989,2010
+55,"CSI-LIMNO_DATA\DATA-lake\MN data\USGS_SHAEP_longterm\Shingobee_Lake_profile_data.xlsx","MN","hardness","DO (mg/L)","Depth (m)",3445,1,12,22,1989,2010
+55,"CSI-LIMNO_DATA\DATA-lake\MN data\USGS_SHAEP_longterm\Shingobee_Lake_profile_data.xlsx","MN","temperature","Temp (°C)","Depth (m)",3477,1,12,22,1989,2010
+55,"CSI-LIMNO_DATA\DATA-lake\MN data\USGS_SHAEP_longterm\Shingobee_Lake_profile_data.xlsx","MN","DO","DO (mg/L)","Depth (m)",3445,1,12,22,1989,2010
+56,"CSI-LIMNO_DATA\DATA-lake\MN data\USGS_SHAEP_longterm\Williams_Lake_profile_data.xlsx","MN","pH","pH","Depth (m)",4817,1,9.77,32,1979,2010
+56,"CSI-LIMNO_DATA\DATA-lake\MN data\USGS_SHAEP_longterm\Williams_Lake_profile_data.xlsx","MN","conductivity","Cond (µS/cm)","Depth (m)",4896,1,9.77,32,1979,2010
+56,"CSI-LIMNO_DATA\DATA-lake\MN data\USGS_SHAEP_longterm\Williams_Lake_profile_data.xlsx","MN","hardness","DO (mg/L)","Depth (m)",4865,1,9.86,32,1979,2010
+56,"CSI-LIMNO_DATA\DATA-lake\MN data\USGS_SHAEP_longterm\Williams_Lake_profile_data.xlsx","MN","temperature","Temp (°C)","Depth (m)",4955,1,10.02,32,1979,2010
+56,"CSI-LIMNO_DATA\DATA-lake\MN data\USGS_SHAEP_longterm\Williams_Lake_profile_data.xlsx","MN","DO","DO (mg/L)","Depth (m)",4865,1,9.86,32,1979,2010
+57,"CSI-LIMNO_DATA\DATA-lake\MO data\Jack Jones dataset\MO Statewide 1978-2013_for_morpho.csv","MO","hardness","Non.Volatile.Sus.Solids..mg.L.; Total.Nitrogen..mg.L.",NA,7923,198,1,31,1979,2013
+58,"CSI-LIMNO_DATA\DATA-lake\MO data\LMVP_water_chemistry_data.csv","MO","hardness","TN..mg.l.; TP..mg.l.","Depth..m.",8135,209,1,20,1988,2010
+58,"CSI-LIMNO_DATA\DATA-lake\MO data\LMVP_water_chemistry_data.csv","MO","temperature","Temp..C.","Depth..m.",6492,188,1,16,1988,2010
+59,"CSI-LIMNO_DATA\DATA-lake\NH data\Mirror Lake\DatabaseData\NH_MIRROR_CHEM_EF.csv","NH","alkalinity","Na; Ca; SO4; Cl; ANC",NA,2226,1,1,43,1967,2010
+59,"CSI-LIMNO_DATA\DATA-lake\NH data\Mirror Lake\DatabaseData\NH_MIRROR_CHEM_EF.csv","NH","pH","pH",NA,1729,1,1,39,1967,2010
+59,"CSI-LIMNO_DATA\DATA-lake\NH data\Mirror Lake\DatabaseData\NH_MIRROR_CHEM_EF.csv","NH","conductivity","SpCond",NA,1472,1,1,33,1967,2010
+59,"CSI-LIMNO_DATA\DATA-lake\NH data\Mirror Lake\DatabaseData\NH_MIRROR_CHEM_EF.csv","NH","DIC","DIC",NA,1158,1,1,30,1975,2010
+59,"CSI-LIMNO_DATA\DATA-lake\NH data\Mirror Lake\DatabaseData\NH_MIRROR_CHEM_EF.csv","NH","hardness","Mg; Ca",NA,2226,1,1,43,1967,2010
+59,"CSI-LIMNO_DATA\DATA-lake\NH data\Mirror Lake\DatabaseData\NH_MIRROR_CHEM_EF.csv","NH","temperature","TEMP",NA,1825,1,1,40,1967,2010
+59,"CSI-LIMNO_DATA\DATA-lake\NH data\Mirror Lake\DatabaseData\NH_MIRROR_CHEM_EF.csv","NH","DO","DO",NA,1869,1,1,43,1967,2010
+60,"CSI-LIMNO_DATA\DATA-lake\NH data\NH_SUNAPEE\NH_SUNAPEE_EF.csv","NH","alkalinity","alk_mglCaCO3","Depth_m",116,1,1.04,20,1993,2012
+60,"CSI-LIMNO_DATA\DATA-lake\NH data\NH_SUNAPEE\NH_SUNAPEE_EF.csv","NH","pH","pH","Depth_m",397,1,1.1,27,1986,2012
+60,"CSI-LIMNO_DATA\DATA-lake\NH data\NH_SUNAPEE\NH_SUNAPEE_EF.csv","NH","temperature","temp_C","Depth_m",121,1,1,26,1986,2012
+60,"CSI-LIMNO_DATA\DATA-lake\NH data\NH_SUNAPEE\NH_SUNAPEE_EF.csv","NH","DO","DO_mgl","Depth_m",121,1,1,26,1986,2012
+61,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_061614_1of2.csv","NH","alkalinity","RESULTS.ALKALINITY, TOTAL; RESULTS.ALKALINITY, CARBONATE AS CACO3; RESULTS.HARDNESS, CA + MG",NA,55,9,1,3,2006,2008
+61,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_061614_1of2.csv","NH","pH","RESULTS.PH",NA,30,29,1,5,2005,2013
+61,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_061614_1of2.csv","NH","conductivity","RESULTS.SPECIFIC CONDUCTANCE",NA,30,29,1,5,2005,2013
+61,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_061614_1of2.csv","NH","turbidity","RESULTS.TURBIDITY",NA,43,11,1,6,2003,2010
+61,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_061614_1of2.csv","NH","hardness","RESULTS.CALCIUM; RESULTS.MAGNESIUM; RESULTS.HARDNESS, CA + MG; RESULTS.HARDNESS, CARBONATE",NA,753,261,1,11,2003,2013
+61,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_061614_1of2.csv","NH","temperature","RESULTS.TEMPERATURE WATER",NA,14,12,1,4,2007,2013
+61,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_061614_1of2.csv","NH","DO","RESULTS.DISSOLVED OXYGEN; RESULTS.DISSOLVED OXYGEN SATURATION; RESULTS.BIOCHEMICAL OXYGEN DEMAND (BOD)",NA,26,26,1,2,2005,2007
+62,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_061614_2of2.csv","NH","alkalinity","RESULTS.HARDNESS, CA + MG",NA,3,3,1,1,2001,2001
+62,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_061614_2of2.csv","NH","conductivity","RESULTS.SPECIFIC CONDUCTANCE",NA,45,4,1,4,1997,2000
+62,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_061614_2of2.csv","NH","hardness","RESULTS.CALCIUM; RESULTS.MAGNESIUM; RESULTS.HARDNESS, CA + MG",NA,866,344,1,8,1995,2002
+63,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_1of4.csv","NH","pH","RESULTS.PH","RESULTS.DEPTH",2909,410,1,5,2010,2014
+63,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_1of4.csv","NH","conductivity","RESULTS.SPECIFIC CONDUCTANCE","RESULTS.DEPTH",3113,419,1,5,2010,2014
+63,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_1of4.csv","NH","turbidity","RESULTS.TURBIDITY","RESULTS.DEPTH",2682,392,1,5,2010,2014
+63,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_1of4.csv","NH","temperature","RESULTS.TEMPERATURE WATER","RESULTS.DEPTH",6076,812,1,5,2010,2014
+63,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_1of4.csv","NH","DO","RESULTS.DISSOLVED OXYGEN; RESULTS.DISSOLVED OXYGEN SATURATION","RESULTS.DEPTH",1041,234,1,4,2010,2013
+64,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_2of4.csv","NH","pH","RESULTS.PH","RESULTS.DEPTH",1770,316,1,5,2005,2009
+64,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_2of4.csv","NH","conductivity","RESULTS.SPECIFIC CONDUCTANCE","RESULTS.DEPTH",2197,366,1,5,2005,2009
+64,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_2of4.csv","NH","turbidity","RESULTS.TURBIDITY","RESULTS.DEPTH",1586,285,1,5,2005,2009
+64,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_2of4.csv","NH","temperature","RESULTS.TEMPERATURE WATER","RESULTS.DEPTH",2185,619,1,5,2005,2009
+64,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_2of4.csv","NH","DO","RESULTS.DISSOLVED OXYGEN; RESULTS.DISSOLVED OXYGEN SATURATION","RESULTS.DEPTH",839,217,1,5,2005,2009
+65,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_3of4.csv","NH","pH","RESULTS.PH","RESULTS.DEPTH",3323,552,2.89,1,Inf,-Inf
+65,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_3of4.csv","NH","conductivity","RESULTS.SPECIFIC CONDUCTANCE","RESULTS.DEPTH",3395,573,1.84,1,Inf,-Inf
+65,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_3of4.csv","NH","turbidity","RESULTS.TURBIDITY","RESULTS.DEPTH",2651,350,1.92,1,Inf,-Inf
+65,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_3of4.csv","NH","temperature","RESULTS.TEMPERATURE WATER","RESULTS.DEPTH",1360,327,2.07,1,Inf,-Inf
+65,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_3of4.csv","NH","DO","RESULTS.DISSOLVED OXYGEN; RESULTS.DISSOLVED OXYGEN SATURATION","RESULTS.DEPTH",1493,351,2.04950495049505,1,Inf,-Inf
+66,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_4of4.csv","NH","pH","RESULTS.PH","RESULTS.DEPTH",3173,462,1,5,1995,1999
+66,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_4of4.csv","NH","conductivity","RESULTS.SPECIFIC CONDUCTANCE","RESULTS.DEPTH",3158,452,1,5,1995,1999
+66,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_4of4.csv","NH","turbidity","RESULTS.TURBIDITY","RESULTS.DEPTH",1817,228,1,5,1995,1999
+66,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_4of4.csv","NH","temperature","RESULTS.TEMPERATURE WATER","RESULTS.DEPTH",1001,297,1,5,1995,1999
+66,"CSI-LIMNO_DATA\DATA-lake\NH data\NHDES_1995toPresent\NH_Lake_Data_extra_4of4.csv","NH","DO","RESULTS.DISSOLVED OXYGEN; RESULTS.DISSOLVED OXYGEN SATURATION","RESULTS.DEPTH",1170,322,1,5,1995,1999
+67,"CSI-LIMNO_DATA\DATA-lake\NJ data\NJ  lakes 2005_2009.xlsx","NJ","alkalinity","Alk (ppm)",NA,557,194,1,5,2005,2009
+67,"CSI-LIMNO_DATA\DATA-lake\NJ data\NJ  lakes 2005_2009.xlsx","NJ","pH","pH",NA,557,194,1,5,2005,2009
+67,"CSI-LIMNO_DATA\DATA-lake\NJ data\NJ  lakes 2005_2009.xlsx","NJ","conductivity","Cond (mS/cm)",NA,557,194,1,5,2005,2009
+67,"CSI-LIMNO_DATA\DATA-lake\NJ data\NJ  lakes 2005_2009.xlsx","NJ","turbidity","Turb (NTU)",NA,557,194,1,5,2005,2009
+67,"CSI-LIMNO_DATA\DATA-lake\NJ data\NJ  lakes 2005_2009.xlsx","NJ","hardness","DO (mg/L); TP (mg/L); TKN (mg/L); NO3N (mg/L); NH4N (mg/L)",NA,557,194,1,5,2005,2009
+67,"CSI-LIMNO_DATA\DATA-lake\NJ data\NJ  lakes 2005_2009.xlsx","NJ","temperature","Temp (C )",NA,557,194,1,5,2005,2009
+67,"CSI-LIMNO_DATA\DATA-lake\NJ data\NJ  lakes 2005_2009.xlsx","NJ","DO","DO (mg/L)",NA,557,194,1,5,2005,2009
+68,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\EPA EMAP (Finished)\EPA EMAP.csv","EPA","alkalinity","CA; CL; ALKCALC; ANC; NA.; SO4",NA,500,370,1,4,1991,1994
+68,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\EPA EMAP (Finished)\EPA EMAP.csv","EPA","conductivity","COND; CONDF",NA,500,370,1,4,1991,1994
+68,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\EPA EMAP (Finished)\EPA EMAP.csv","EPA","turbidity","TURB; TURBF",NA,500,370,1,4,1991,1994
+68,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\EPA EMAP (Finished)\EPA EMAP.csv","EPA","DIC","DIC",NA,500,370,1,4,1991,1994
+68,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\EPA EMAP (Finished)\EPA EMAP.csv","EPA","hardness","CA; MG; MGF",NA,500,370,1,4,1991,1994
+69,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\TIME Data (Finished)\TIME Nutrients.xlsx","NA","alkalinity","ANC; NA; CA; SO4; CL",NA,3509,334,1,1,Inf,-Inf
+69,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\TIME Data (Finished)\TIME Nutrients.xlsx","NA","pH","PH_B; PH_S",NA,3421,334,1,1,Inf,-Inf
+69,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\TIME Data (Finished)\TIME Nutrients.xlsx","NA","conductivity","COND",NA,3474,334,1,1,Inf,-Inf
+69,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\TIME Data (Finished)\TIME Nutrients.xlsx","NA","turbidity","TURB",NA,977,179,1,1,Inf,-Inf
+69,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\TIME Data (Finished)\TIME Nutrients.xlsx","NA","DIC","DIC",NA,1920,312,1,1,Inf,-Inf
+69,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\TIME Data (Finished)\TIME Nutrients.xlsx","NA","hardness","MG; CA",NA,3501,332,1,1,Inf,-Inf
+69,"CSI-LIMNO_DATA\DATA-lake\Northeast TIME RLTM\TIME Data (Finished)\TIME Nutrients.xlsx","NA","temperature","WTEMP",NA,947,246,1,1,Inf,-Inf
+70,"CSI-LIMNO_DATA\DATA-lake\NY data\Adirondack Lakes (finished)\ALS_SUMMER_SURFACE_CHEM_1984-87.csv","NY","alkalinity","Ca..mg.L.1.; Na..mg.L.1.; SO4..mg.L.1.; Cl..mg.L.1.; ANC..µeq.L.1.",NA,1469,954,1,4,1984,1987
+70,"CSI-LIMNO_DATA\DATA-lake\NY data\Adirondack Lakes (finished)\ALS_SUMMER_SURFACE_CHEM_1984-87.csv","NY","conductivity","SCONDUCT..µmhos.cm.1.",NA,1434,933,1,4,1984,1987
+70,"CSI-LIMNO_DATA\DATA-lake\NY data\Adirondack Lakes (finished)\ALS_SUMMER_SURFACE_CHEM_1984-87.csv","NY","DIC","DIC..mg.L.1.",NA,1437,935,1,4,1984,1987
+70,"CSI-LIMNO_DATA\DATA-lake\NY data\Adirondack Lakes (finished)\ALS_SUMMER_SURFACE_CHEM_1984-87.csv","NY","hardness","SIO2..mg.L.1.; Ca..mg.L.1.; Na..mg.L.1.; K..mg.L.1.; Fe..mg.L.1.; SO4..mg.L.1.; Cl..mg.L.1.; F..mg.L.1.; Mg..mg.L.1.; Mn..mg.L.1.; DIC..mg.L.1.; TOTAL.P1..mg.L.1.; DOC..mg.L.1.; NO3..mg.L.1.; TOTAL.P2..mg.L.1.; NH4..mg.L.1.; Pb..mg.L.1.; Zn..mg.L.1.",NA,1469,954,1,4,1984,1987
+71,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\catskill_reservoirs_final_stc.xlsx","NY","alkalinity","CL (mg/l); SO4 (mg/l); ALK",NA,9566,6,1,28,1984,2011
+71,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\catskill_reservoirs_final_stc.xlsx","NY","pH","PH (units)",NA,26223,6,1,28,1984,2011
+71,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\catskill_reservoirs_final_stc.xlsx","NY","conductivity","SPCON (umhos/cm)",NA,25964,6,1,28,1984,2011
+71,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\catskill_reservoirs_final_stc.xlsx","NY","turbidity","TURB (NTU)",NA,27784,6,1,28,1984,2011
+71,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\catskill_reservoirs_final_stc.xlsx","NY","hardness","DO (mg/l); TN (mg/l); NO3NO2 (mg/l); CL (mg/l); SO4 (mg/l); DOC (mg/l)",NA,26234,6,1,28,1984,2011
+71,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\catskill_reservoirs_final_stc.xlsx","NY","temperature","TEMP (C)",NA,26791,6,1,28,1984,2011
+71,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\catskill_reservoirs_final_stc.xlsx","NY","DO","DO (mg/l)",NA,26234,6,1,28,1984,2011
+72,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\CatskillResvProfileData92-11.xlsx","NY","pH","PH (units)",NA,192323,6,1,20,1992,2011
+72,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\CatskillResvProfileData92-11.xlsx","NY","conductivity","SPCON (umhos/cm)",NA,193199,6,1,20,1992,2011
+72,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\CatskillResvProfileData92-11.xlsx","NY","hardness","DO (mg/l)",NA,192436,6,1,20,1992,2011
+72,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\CatskillResvProfileData92-11.xlsx","NY","temperature","TEMP. (C)",NA,196698,6,1,20,1992,2011
+72,"CSI-LIMNO_DATA\DATA-lake\NY data\Catskills_Reservoirs\CatskillResvProfileData92-11.xlsx","NY","DO","DO (mg/l)",NA,192436,6,1,20,1992,2011
+73,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_CSLAP (finished)\CSLAP Raw Data_StanleyUWIS.xlsx","NY","alkalinity","Ca",NA,1918,257,1,11,2001,2011
+73,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_CSLAP (finished)\CSLAP Raw Data_StanleyUWIS.xlsx","NY","pH","pH",NA,16488,360,1,27,1986,2012
+73,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_CSLAP (finished)\CSLAP Raw Data_StanleyUWIS.xlsx","NY","conductivity","Cond25",NA,16489,360,1,27,1986,2012
+73,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_CSLAP (finished)\CSLAP Raw Data_StanleyUWIS.xlsx","NY","hardness","Ca",NA,1918,257,1,11,2001,2011
+74,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_LCI (finished)\LCI Master 1982-2010_shortened.csv","NY","alkalinity","ANC; CL; SO4; Ca; Na",NA,2097,461,1,23,1925,2010
+74,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_LCI (finished)\LCI Master 1982-2010_shortened.csv","NY","pH","PH",NA,1653,380,1,23,1925,2008
+74,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_LCI (finished)\LCI Master 1982-2010_shortened.csv","NY","conductivity","COND25",NA,1502,340,1,22,1925,2007
+74,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_LCI (finished)\LCI Master 1982-2010_shortened.csv","NY","turbidity","TURBIDITY",NA,140,54,1,4,1981,1989
+74,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_LCI (finished)\LCI Master 1982-2010_shortened.csv","NY","hardness","Mg; Ca",NA,900,293,1,10,2001,2010
+75,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_SENECA (finished)\Seneca Lake Epilimnion Data_Halfman.xlsx","NY","alkalinity","Alkalinity (ppm, CaCO3); Calcium Hardness (ppm, CaCO3); Chloride (ppm, Cl); Total Hardness (ppm, CaCO3)",NA,1429,1,1,18,1990,2012
+75,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_SENECA (finished)\Seneca Lake Epilimnion Data_Halfman.xlsx","NY","conductivity","Conductivity (uS/cm)",NA,994,1,1,13,1990,2012
+75,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_SENECA (finished)\Seneca Lake Epilimnion Data_Halfman.xlsx","NY","hardness","TSS (mg/L); Nitrate (mg/L, N); Calcium Hardness (ppm, CaCO3); Total Hardness (ppm, CaCO3)",NA,1578,1,1,23,1990,2012
+75,"CSI-LIMNO_DATA\DATA-lake\NY data\NY_SENECA (finished)\Seneca Lake Epilimnion Data_Halfman.xlsx","NY","temperature","Temperature (oC)",NA,1071,1,1,18,1990,2012
+76,"CSI-LIMNO_DATA\DATA-lake\NY data\Onieda Lake\kgordon.37.1-Limno_Sum_Export.csv","NY","pH","pH",NA,4357,1,1,32,1975,2006
+76,"CSI-LIMNO_DATA\DATA-lake\NY data\Onieda Lake\kgordon.37.1-Limno_Sum_Export.csv","NY","conductivity","Cond",NA,4357,1,1,32,1975,2006
+76,"CSI-LIMNO_DATA\DATA-lake\NY data\Onieda Lake\kgordon.37.1-Limno_Sum_Export.csv","NY","temperature","Avg.Temp",NA,4357,1,1,32,1975,2006
+76,"CSI-LIMNO_DATA\DATA-lake\NY data\Onieda Lake\kgordon.37.1-Limno_Sum_Export.csv","NY","DO","Bottom.DO",NA,4357,1,1,32,1975,2006
+77,"CSI-LIMNO_DATA\DATA-lake\OH Data\Ohio_data_original_from_Vanni et al CSI LIMN data.xlsx","OH","pH","PH",NA,73,14,1,4,2006,2010
+77,"CSI-LIMNO_DATA\DATA-lake\OH Data\Ohio_data_original_from_Vanni et al CSI LIMN data.xlsx","OH","hardness","SS (mg/L); NVSS (mg/L)",NA,775,109,1,13,1994,2006
+77,"CSI-LIMNO_DATA\DATA-lake\OH Data\Ohio_data_original_from_Vanni et al CSI LIMN data.xlsx","OH","temperature","Air_Temp ( C)",NA,576,56,1,14,1995,2010
+78,"CSI-LIMNO_DATA\DATA-lake\OH Data\Ohio_data_original_from_Vanni et al CSI LIMN data.xlsx","OH","hardness","DO (mg/L)",NA,13530,155,1,15,1995,2011
+78,"CSI-LIMNO_DATA\DATA-lake\OH Data\Ohio_data_original_from_Vanni et al CSI LIMN data.xlsx","OH","temperature","Temp (C )",NA,13739,155,1,15,1995,2011
+78,"CSI-LIMNO_DATA\DATA-lake\OH Data\Ohio_data_original_from_Vanni et al CSI LIMN data.xlsx","OH","DO","DO (mg/L)",NA,13530,155,1,15,1995,2011
+79,"CSI-LIMNO_DATA\DATA-lake\PA data\Poconos-Lacawac\Poconos_1988-2011limno_GIL-LAC.xlsx","PA","alkalinity","ALKALI",NA,805,2,1,11,1988,2010
+79,"CSI-LIMNO_DATA\DATA-lake\PA data\Poconos-Lacawac\Poconos_1988-2011limno_GIL-LAC.xlsx","PA","pH","PH",NA,1005,2,1,11,1988,2010
+79,"CSI-LIMNO_DATA\DATA-lake\PA data\Poconos-Lacawac\Poconos_1988-2011limno_GIL-LAC.xlsx","PA","temperature","TEMP C",NA,5992,2,1,15,1988,2011
+79,"CSI-LIMNO_DATA\DATA-lake\PA data\Poconos-Lacawac\Poconos_1988-2011limno_GIL-LAC.xlsx","PA","DO","OXYGEN",NA,5771,2,1,15,1988,2011
+80,"CSI-LIMNO_DATA\DATA-lake\PA data\Wallenpaupack\pa_wallenpaupack_chem.csv","PA","alkalinity","ALK",NA,1322,5,1,29,1980,2010
+80,"CSI-LIMNO_DATA\DATA-lake\PA data\Wallenpaupack\pa_wallenpaupack_chem.csv","PA","pH","pH",NA,2794,5,1,29,1980,2008
+81,"CSI-LIMNO_DATA\DATA-lake\RI data\RI_all lakes.xlsx","Rl","alkalinity","Alk; Cl; Ca",NA,3265,120,1,22,1988,2010
+81,"CSI-LIMNO_DATA\DATA-lake\RI data\RI_all lakes.xlsx","Rl","pH","pH",NA,3530,122,1,22,1988,2010
+81,"CSI-LIMNO_DATA\DATA-lake\RI data\RI_all lakes.xlsx","Rl","hardness","Ca; Mg",NA,421,49,1,9,1988,2010
+81,"CSI-LIMNO_DATA\DATA-lake\RI data\RI_all lakes.xlsx","Rl","temperature","Temp",NA,17403,122,1,23,1988,2010
+83,"CSI-LIMNO_DATA\DATA-lake\VT data\VTDWQ (Finished)\VT Profile Dataset.csv","VT","temperature","Result.TempC",NA,62053,238,1,22,1989,2010
+83,"CSI-LIMNO_DATA\DATA-lake\VT data\VTDWQ (Finished)\VT Profile Dataset.csv","VT","DO","Result.DO",NA,64149,239,1,23,1984,2010
+84,"CSI-LIMNO_DATA\DATA-lake\WI data\1984 EPA ELA (Finished)\1984 EPA-ELA Survey.csv","WI","alkalinity","anc; ca; na; so4; cl",NA,254,215,1,1,1984,1984
+84,"CSI-LIMNO_DATA\DATA-lake\WI data\1984 EPA ELA (Finished)\1984 EPA-ELA Survey.csv","WI","conductivity","mea_cond; cal_cond",NA,254,215,1,1,1984,1984
+84,"CSI-LIMNO_DATA\DATA-lake\WI data\1984 EPA ELA (Finished)\1984 EPA-ELA Survey.csv","WI","turbidity","turbid",NA,254,215,1,1,1984,1984
+84,"CSI-LIMNO_DATA\DATA-lake\WI data\1984 EPA ELA (Finished)\1984 EPA-ELA Survey.csv","WI","DIC","eq_dic; cl_dic",NA,254,215,1,1,1984,1984
+84,"CSI-LIMNO_DATA\DATA-lake\WI data\1984 EPA ELA (Finished)\1984 EPA-ELA Survey.csv","WI","hardness","ca; mg",NA,254,215,1,1,1984,1984
+84,"CSI-LIMNO_DATA\DATA-lake\WI data\1984 EPA ELA (Finished)\1984 EPA-ELA Survey.csv","WI","temperature","stemp",NA,253,214,1,1,1984,1984
+85,"CSI-LIMNO_DATA\DATA-lake\WI data\BioCom (Finished)\Biocom_Chem.csv","WI","alkalinity","alk; flag_alk",NA,122,59,1,4,2001,2004
+85,"CSI-LIMNO_DATA\DATA-lake\WI data\BioCom (Finished)\Biocom_Chem.csv","WI","pH","ph",NA,125,58,1,4,2001,2004
+85,"CSI-LIMNO_DATA\DATA-lake\WI data\BioCom (Finished)\Biocom_Chem.csv","WI","conductivity","cond; flag_cond",NA,126,59,1,4,2001,2004
+85,"CSI-LIMNO_DATA\DATA-lake\WI data\BioCom (Finished)\Biocom_Chem.csv","WI","DIC","dic; flag_dic",NA,151,61,1,4,2001,2004
+85,"CSI-LIMNO_DATA\DATA-lake\WI data\BioCom (Finished)\Biocom_Chem.csv","WI","temperature","wtemp; flag_wtemp",NA,1187,62,1,4,2001,2004
+85,"CSI-LIMNO_DATA\DATA-lake\WI data\BioCom (Finished)\Biocom_Chem.csv","WI","DO","o2",NA,1133,62,1,4,2001,2004
+86,"CSI-LIMNO_DATA\DATA-lake\WI data\Cross Lakes (Finished)\Xlakes_tempDOprof.csv","WI","temperature","WTEMP",NA,381,19,1,1,2006,2006
+86,"CSI-LIMNO_DATA\DATA-lake\WI data\Cross Lakes (Finished)\Xlakes_tempDOprof.csv","WI","DO","DO",NA,381,19,1,1,2006,2006
+87,"CSI-LIMNO_DATA\DATA-lake\WI data\Hanson 2004 Survey (Finished)\Hansonetal2004final.csv","WI","alkalinity","alkalinity; CL; SO4; CA; NA.",NA,169,169,1,1,2004,2004
+87,"CSI-LIMNO_DATA\DATA-lake\WI data\Hanson 2004 Survey (Finished)\Hansonetal2004final.csv","WI","pH","pH",NA,169,169,1,1,2004,2004
+87,"CSI-LIMNO_DATA\DATA-lake\WI data\Hanson 2004 Survey (Finished)\Hansonetal2004final.csv","WI","DIC","DIC",NA,169,169,1,1,2004,2004
+87,"CSI-LIMNO_DATA\DATA-lake\WI data\Hanson 2004 Survey (Finished)\Hansonetal2004final.csv","WI","hardness","CA; MG",NA,169,169,1,1,2004,2004
+88,"CSI-LIMNO_DATA\DATA-lake\WI data\L_Position (Finished)\L_Position_Chem.csv","WI","alkalinity","ca; na; alk; cl; so4",NA,169,49,1,2,1998,1999
+88,"CSI-LIMNO_DATA\DATA-lake\WI data\L_Position (Finished)\L_Position_Chem.csv","WI","pH","ph",NA,252,48,1,3,1998,2000
+88,"CSI-LIMNO_DATA\DATA-lake\WI data\L_Position (Finished)\L_Position_Chem.csv","WI","conductivity","cond",NA,115,48,1,3,1998,2000
+88,"CSI-LIMNO_DATA\DATA-lake\WI data\L_Position (Finished)\L_Position_Chem.csv","WI","DIC","dic",NA,71,49,1,3,1998,2000
+88,"CSI-LIMNO_DATA\DATA-lake\WI data\L_Position (Finished)\L_Position_Chem.csv","WI","hardness","ca; mg",NA,169,49,1,2,1998,1999
+89,"CSI-LIMNO_DATA\DATA-lake\WI data\L_Position (Finished)\L_Position_Profiles.csv","WI","conductivity","cond",NA,1127,42,1,2,1998,1999
+89,"CSI-LIMNO_DATA\DATA-lake\WI data\L_Position (Finished)\L_Position_Profiles.csv","WI","temperature","wtemp",NA,1456,45,1,2,1998,1999
+89,"CSI-LIMNO_DATA\DATA-lake\WI data\L_Position (Finished)\L_Position_Profiles.csv","WI","DO","o2",NA,1409,45,1,2,1998,1999
+90,"CSI-LIMNO_DATA\DATA-lake\WI data\LDF Tribe (finished)\Nutrient Data\LDF Nutrients(new).csv","WI","turbidity","Result.Value.Turbidity",NA,22,11,1,2,2010,2012
+92,"CSI-LIMNO_DATA\DATA-lake\WI data\LTER (finished)\LTER datafiles\all_ntl_nutrients.csv","WI","alkalinity","alk; flagalk",NA,4879,11,1,31,1981,2011
+92,"CSI-LIMNO_DATA\DATA-lake\WI data\LTER (finished)\LTER datafiles\all_ntl_nutrients.csv","WI","pH","ph",NA,15622,11,1,31,1981,2011
+92,"CSI-LIMNO_DATA\DATA-lake\WI data\LTER (finished)\LTER datafiles\all_ntl_nutrients.csv","WI","DIC","dic",NA,12556,11,1,27,1985,2011
+93,"CSI-LIMNO_DATA\DATA-lake\WI data\LTER (finished)\LTER datafiles\major ions.csv","WI","alkalinity","na; ca; cl; so4",NA,4813,11,1,30,1981,2010
+93,"CSI-LIMNO_DATA\DATA-lake\WI data\LTER (finished)\LTER datafiles\major ions.csv","WI","conductivity","cond; flagcond",NA,5391,7,1,30,1981,2010
+93,"CSI-LIMNO_DATA\DATA-lake\WI data\LTER (finished)\LTER datafiles\major ions.csv","WI","hardness","mg; ca",NA,4814,11,1,30,1981,2010
+94,"CSI-LIMNO_DATA\DATA-lake\WI data\LTER (finished)\LTER datafiles\temp do.csv","WI","temperature","wtemp; flagwtemp",NA,76442,11,1,30,1981,2010
+94,"CSI-LIMNO_DATA\DATA-lake\WI data\LTER (finished)\LTER datafiles\temp do.csv","WI","DO","o2",NA,75275,11,1,30,1981,2010
+95,"CSI-LIMNO_DATA\DATA-lake\WI data\UMWLTM\UMWLTM_KEW_CSI_V2.xlsx","WI","alkalinity","ANC",NA,1165,28,1,18,1983,2000
+95,"CSI-LIMNO_DATA\DATA-lake\WI data\UMWLTM\UMWLTM_KEW_CSI_V2.xlsx","WI","conductivity","COND; CONDT",NA,1193,28,1,18,1983,2000
+95,"CSI-LIMNO_DATA\DATA-lake\WI data\UMWLTM\UMWLTM_KEW_CSI_V2.xlsx","WI","DIC","DIC",NA,470,28,1,9,1992,2000
+95,"CSI-LIMNO_DATA\DATA-lake\WI data\UMWLTM\UMWLTM_KEW_CSI_V2.xlsx","WI","hardness","MGFIL; MGFILT",NA,1190,28,1,18,1983,2000
+96,"CSI-LIMNO_DATA\DATA-lake\WI data\Webster 2000 Survey\LKLS2000_WISCONSIN_KEW_CSI.xlsx","WI","alkalinity","Ca; Alk","IntSam_depth",121,121,1,1,2000,2000
+96,"CSI-LIMNO_DATA\DATA-lake\WI data\Webster 2000 Survey\LKLS2000_WISCONSIN_KEW_CSI.xlsx","WI","pH","pH","IntSam_depth",113,113,1,1,2000,2000
+96,"CSI-LIMNO_DATA\DATA-lake\WI data\Webster 2000 Survey\LKLS2000_WISCONSIN_KEW_CSI.xlsx","WI","conductivity","Cond","IntSam_depth",113,113,1,1,2000,2000
+96,"CSI-LIMNO_DATA\DATA-lake\WI data\Webster 2000 Survey\LKLS2000_WISCONSIN_KEW_CSI.xlsx","WI","turbidity","Turbidity","IntSam_depth",113,113,1,1,2000,2000
+96,"CSI-LIMNO_DATA\DATA-lake\WI data\Webster 2000 Survey\LKLS2000_WISCONSIN_KEW_CSI.xlsx","WI","hardness","Ca; Mg","IntSam_depth",121,121,1,1,2000,2000
+96,"CSI-LIMNO_DATA\DATA-lake\WI data\Webster 2000 Survey\LKLS2000_WISCONSIN_KEW_CSI.xlsx","WI","DO","DO_1m; DO_bot","IntSam_depth",121,121,1,1,2000,2000
+97,"CSI-LIMNO_DATA\DATA-lake\WI data\WERL\WERL_Wisconsin_KEW_CSI_v2.xlsx","WI","alkalinity","ANC",NA,513,48,1,14,1987,2000
+97,"CSI-LIMNO_DATA\DATA-lake\WI data\WERL\WERL_Wisconsin_KEW_CSI_v2.xlsx","WI","conductivity","COND",NA,513,48,1,14,1987,2000
+97,"CSI-LIMNO_DATA\DATA-lake\WI data\WERL\WERL_Wisconsin_KEW_CSI_v2.xlsx","WI","turbidity","TURB",NA,80,47,1,2,1987,1988
+97,"CSI-LIMNO_DATA\DATA-lake\WI data\WERL\WERL_Wisconsin_KEW_CSI_v2.xlsx","WI","DIC","DIC",NA,514,48,1,14,1987,2000
+97,"CSI-LIMNO_DATA\DATA-lake\WI data\WERL\WERL_Wisconsin_KEW_CSI_v2.xlsx","WI","hardness","MGFIL",NA,514,48,1,14,1987,2000

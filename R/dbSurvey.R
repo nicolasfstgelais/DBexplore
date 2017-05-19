@@ -54,7 +54,7 @@ LtoC <- function(x) {as.character(x)}
 # debug
 dirPath="C:/Users/nicol/Dropbox/CSI-LIMNO_DATA"
 inputFile = "dbInput.xlsx"
-startAt = 9
+startAt = 67
 append = F
 setwd("C:/Users/nicol/Documents/GitHub/dbSurvey")
 
@@ -82,33 +82,59 @@ dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append =
         nskip = 0
     }
 
-
     # create the final output table
-    output <- data.frame(path = character(), state = character(), category = character(),
-        varNames = character(), varDepth = character(), nbObs = numeric(),
-        nbLakes = numeric(), nbDepths = numeric(), nbYears = numeric(),
-        startYear = numeric(), endYear = numeric())
+    output <- data.frame(path=character(),
+                         state=character(),
+                         category=character(),
+                         varNames=character(),
+                         varDepth=character(),
+                         nbObs=numeric(),
+                         nbLakes=numeric(),
+                         nbDepths=numeric(),
+                         nbYears=numeric(),
+                         startYear=numeric(),
+                         endYear=numeric())
 
-    output$category = LtoC(output$category)
-    output$path = LtoC(output$path)
-    output$varNames = LtoC(output$varNames)
-    output$varDepth = LtoC(output$varDepth)
-    output$state = LtoC(output$state)
+    output$category=LtoC(output$category)
+    output$path=LtoC(output$path)
+    output$varNames=LtoC(output$varNames)
+    output$varDepth=LtoC(output$varDepth)
+    output$state=LtoC(output$state)
 
-
-    #change working directory
-    if(!is.na(dirPath)){setwd(dirPath)}
 
 
     i = 1
     # j=1
-    count = 1
+
     # if you want to run the loop for a limited number of db starting at x
     if (append) {startAt = nskip + 1}
     # if(!append)startAt=93
-
+i=57
 
     for (i in startAt:nrow(input)) {
+      count = 1
+      # create the final output table
+      output <- data.frame( ID=numeric(),
+                            path=character(),
+                           state=character(),
+                           category=character(),
+                           varNames=character(),
+                           varDepth=character(),
+                           nbObs=numeric(),
+                           nbLakes=numeric(),
+                           nbDepths=numeric(),
+                           nbYears=numeric(),
+                           startYear=numeric(),
+                           endYear=numeric())
+
+      output$category=LtoC(output$category)
+      output$path=LtoC(output$path)
+      output$varNames=LtoC(output$varNames)
+      output$varDepth=LtoC(output$varDepth)
+      output$state=LtoC(output$state)
+
+      #change working directory
+      if(!is.na(dirPath)){setwd(dirPath)}
 
         sheetTemp = do.call(rbind, strsplit(LtoC(input[i, "sheet"]), ";"))
 
@@ -158,7 +184,7 @@ dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append =
         # 'wide') }
 
         if (!is.na(input[i, "NA"]))
-            {db[db == input[i, "NA"]] = NA}
+            {db[db == input[i, "NA"][[1]]] = NA}
 
         Zsample = LtoC(input[i, "Zsample"])
         if (is.na(Zsample)) {
@@ -250,16 +276,17 @@ dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append =
 
                 # LtoC(db[!is.na(db[,k]),input[i,'Zsample']])
                 #db[!is.na(db[, k]), ]
-
+              # problem with tibble
+                db=as.data.frame(db)
 
                 mat[k, "nbObs"] = nrow(db[!is.na(db[, k]), ])
                 mat[k, "nbLakes"] = length(unique(LtoC(db[!is.na(db[, k]),
                   stationId])))
-                mat[k, "nbYears"] = length(unique(lubridate::year(as.matrix(as.data.frame(db[!is.na(db[,
+                mat[k, "nbYears"] = length(unique(lubridate::year(((db[!is.na(db[,
                   k]), dateId])))))
-                mat[k, "startYear"] = min(lubridate::year(as.matrix(db[!is.na(db[, k]),
+                mat[k, "startYear"] = min(lubridate::year((db[!is.na(db[, k]),
                   dateId])), na.rm = T)
-                mat[k, "endYear"] = max(lubridate::year(as.matrix(db[!is.na(db[, k]), dateId])),
+                mat[k, "endYear"] = max(lubridate::year((db[!is.na(db[, k]), dateId])),
                   na.rm = T)
                 if (mat[k, "nbLakes"] == 0)
                  { mat[k, "nbLakes"] = 1}
@@ -299,16 +326,21 @@ dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append =
 
             output[count, "varNames"] = paste(unlist(rownames(mat)), collapse = "; ")
             output[count, "varDepth"] = Zsample
+            output[count, "ID"]=i
 
             count = count + 1
         }
 
         print(i)
-    }
-    setwd(oriDir)
+        setwd(oriDir)
+        # need to fix the append component
+        if(i==1){   write.table(output, "output.csv",sep = ",",row.names = F)}
+        if(i!=1){
+        write.table(output, "output.csv", sep = ",", col.names = F, append = T,row.names = F)}
 
-    if (append) {output = rbind(outp, output)}
-    #write.csv(output, "output.csv")
+        }
+
+    #if (append) {output = rbind(outp, output)}
     return(output)
 }
 
