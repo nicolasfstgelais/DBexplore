@@ -1,5 +1,4 @@
-
-#' A Cat Function
+#' DBsurvey main function
 #'
 #' This function allows you to express your love of cats.
 #' @param love Do you love cats? Defaults to TRUE.
@@ -25,11 +24,11 @@ LtoW <- function(db, size = 10000)
         }
         timevar = LtoC(input[i, "wideVar"])
         if (count == 1)
-            dbtemp = plyr::reshape(db[count:(count + size - 1), ], timevar = timevar,
-                idvar = idvar, direction = "wide")
+            {dbtemp = plyr::reshape(db[count:(count + size - 1), ], timevar = timevar,
+                idvar = idvar, direction = "wide")}
         if (count > 1)
-            dbtemp = rbind.fill(dbtemp, plyr::reshape(db[count:(count + size -
-                1), ], timevar = timevar, idvar = idvar, direction = "wide"))
+            {dbtemp = rbind.fill(dbtemp, plyr::reshape(db[count:(count + size -
+                1), ], timevar = timevar, idvar = idvar, direction = "wide"))}
         print(paste(count, ":", nrow(dbtemp)))
         count = count + size
     }
@@ -51,11 +50,20 @@ LtoC <- function(x) {as.character(x)}
 # when read empty cells are coded as NAs
 #' @export
 
-dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
+# debug
+#dirPath="C:/Users/nicol/Dropbox/CSI-LIMNO_DATA"
+#inputFile = "dbInput.xlsx"
+#dirPath=NA
+#startAt = 96
+#append = F
+
+dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 96,append = F)
   {
 
+    oriDir=getwd()
+
     # input a excel, but should eventually be a csv
-    input = readxl::read_excel(inputPath, sheet = "dbInput")
+    input = readxl::read_excel(inputFile, sheet = "dbInput")
 
     #input categories to identified should also be a csv
     categories = readxl::read_excel("dbInput.xlsx", sheet = "categories")
@@ -87,13 +95,15 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
     output$state = LtoC(output$state)
 
 
+    #change working directory
+    if(!is.na(dirPath)){setwd(dirPath)}
 
 
     i = 1
     # j=1
     count = 1
     # if you want to run the loop for a limited number of db starting at x
-    if (append) startAt = nskip + 1
+    if (append) {startAt = nskip + 1}
     # if(!append)startAt=93
 
 
@@ -113,17 +123,17 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
                   sheet = 1
                 }
                 if (first)
-                  db = readxl::read_excel(paste("..\\",LtoC(input[i, "path"]),sep=""), sheet = sheet)
+                  {db = readxl::read_excel(paste("..\\",LtoC(input[i, "path"]),sep=""), sheet = sheet)}
                 if (!first)
-                  db = rbind(db, readxl::read_excel(paste("..\\", LtoC(input[i,
-                    "path"]), sep = ""), sheet = sheet)[, colnames(db)])
+                  {db = rbind(db, readxl::read_excel(paste("..\\", LtoC(input[i,
+                    "path"]), sep = ""), sheet = sheet)[, colnames(db)])}
                 first = F
             }
         }
 
         if (input[i, "type"] == "csv")
-            db = read.csv(paste("..\\", LtoC(input[i, "path"]), sep = ""),
-                1, na.strings = c("", "NA"))
+            {db = read.csv(paste("..\\", LtoC(input[i, "path"]), sep = ""),
+                1, na.strings = c("", "NA"))}
 
         # long db are trandformed to wide db
         if (!is.na(input[i, "wideVar"])) {
@@ -147,7 +157,7 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
         # 'wide') }
 
         if (!is.na(input[i, "NA"]))
-            db[db == input[i, "NA"]] = NA
+            {db[db == input[i, "NA"]] = NA}
 
         Zsample = LtoC(input[i, "Zsample"])
         if (is.na(Zsample)) {
@@ -174,8 +184,8 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
 
 
         if (input[i, "dateFormat"] == "B")
-            db[, dateId] = LtoC(lubridate::ymd(lubridate::parse_date_time(LtoC(db[, dateId]),
-                orders = "mdy")))
+            {db[, dateId] = LtoC(lubridate::ymd(lubridate::parse_date_time(LtoC(db[, dateId]),
+                orders = "mdy")))}
 
         if (input[i, "dateFormat"] == "C") {
             db$date2 = NA
@@ -197,7 +207,7 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
             db$date2 = NULL
         }
         if (input[i, "dateFormat"] == "E")
-            db[, dateId] = LtoC(lubridate::ymd(LtoC(db[, dateId])))
+            {db[, dateId] = LtoC(lubridate::ymd(LtoC(db[, dateId])))}
 
         if (input[i, "dateFormat"] == "F") {
             y = "YEAR"
@@ -220,13 +230,12 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
             pattTemp = paste(unlist(pattTemp), collapse = "|")
             pattRem = paste(unlist(exclu), collapse = "|")
             rem = grep(pattern = pattRem, colnames(db), ignore.case = TRUE)
-            if (length(rem) > 0)
+            if (length(rem) > 0){
                 colsTemp = grep(pattern = pattTemp, colnames(db)[-rem],
-                  ignore.case = TRUE) else {
+                  ignore.case = TRUE)} else {
                 colsTemp = grep(pattern = pattTemp, colnames(db), ignore.case = TRUE)
             }
-            if (length(colsTemp) == 0)
-                next
+            if (length(colsTemp) == 0) {next}
 
             output[count, "path"] = LtoC(input[i, "path"])
             output[count, "category"] = categTemp
@@ -239,21 +248,20 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
             for (k in colnames(db)[colsTemp]) {
 
                 # LtoC(db[!is.na(db[,k]),input[i,'Zsample']])
-
-                db[!is.na(db[, k]), ]
+                #db[!is.na(db[, k]), ]
 
 
                 mat[k, "nbObs"] = nrow(db[!is.na(db[, k]), ])
                 mat[k, "nbLakes"] = length(unique(LtoC(db[!is.na(db[, k]),
                   stationId])))
-                mat[k, "nbYears"] = length(unique(lubridate::year(LtoC(db[!is.na(db[,
-                  k]), dateId]))))
-                mat[k, "startYear"] = min(lubridate::year(LtoC(db[!is.na(db[, k]),
+                mat[k, "nbYears"] = length(unique(lubridate::year(as.matrix(as.data.frame(db[!is.na(db[,
+                  k]), dateId])))))
+                mat[k, "startYear"] = min(lubridate::year(as.matrix(db[!is.na(db[, k]),
                   dateId])), na.rm = T)
-                mat[k, "endYear"] = max(lubridate::year(LtoC(db[!is.na(db[, k]), dateId])),
+                mat[k, "endYear"] = max(lubridate::year(as.matrix(db[!is.na(db[, k]), dateId])),
                   na.rm = T)
                 if (mat[k, "nbLakes"] == 0)
-                  mat[k, "nbLakes"] = 1
+                 { mat[k, "nbLakes"] = 1}
 
                 tempMat = db[!is.na(db[, k]), ]
                 tempMat$uniM = paste(tempMat[, stationId], tempMat[, dateId],
@@ -268,13 +276,13 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
                       Zsample]))
                     c = c + 1
                     if (c > 100)
-                      break
+                      {break}
                   }
                 }
             }
 
             if (nrow(mat) > 1)
-                mat = mat[order(mat[, "nbObs"], decreasing = T), ]
+                {mat = mat[order(mat[, "nbObs"], decreasing = T), ]}
             output[count, "nbObs"] = mat[1, "nbObs"]
             output[count, "nbLakes"] = mat[1, "nbLakes"]
             output[count, "nbYears"] = mat[1, "nbYears"]
@@ -283,7 +291,7 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
             output[count, "endYear"] = mat[1, "endYear"]
             output[count, "state"] = input[i, "state"]
             if (!is.na(Zsample)) {
-                output[count, "nbDepths"] = mean(tempZ)
+               { output[count, "nbDepths"] = mean(tempZ)}
             } else {
                 output[count, "nbDepths"] = 1
             }
@@ -296,9 +304,9 @@ dbSurvey <- function(inputPath = "dbInput.xlsx", startAt = 97,append = F)
 
         print(i)
     }
+    setwd(oriDir)
 
-
-    if (append) output = rbind(outp, output)
+    if (append) {output = rbind(outp, output)}
     #write.csv(output, "output.csv")
     return(output)
 }
