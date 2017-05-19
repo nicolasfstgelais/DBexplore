@@ -12,7 +12,8 @@ rm(list = ls(all = TRUE))
 #library(lubridate)
 #library(plyr)
 
-LtoW <- function(db, size = 10000)
+# need to work on this function far from optimal -> need input and i
+LtoW <- function(db, input, i,size = 10000)
   {
     count = 1
     while (count < nrow(db)) {
@@ -24,10 +25,10 @@ LtoW <- function(db, size = 10000)
         }
         timevar = LtoC(input[i, "wideVar"])
         if (count == 1)
-            {dbtemp = plyr::reshape(db[count:(count + size - 1), ], timevar = timevar,
+            {dbtemp = reshape(db[count:(count + size - 1), ], timevar = timevar,
                 idvar = idvar, direction = "wide")}
         if (count > 1)
-            {dbtemp = rbind.fill(dbtemp, plyr::reshape(db[count:(count + size -
+            {dbtemp = plyr::rbind.fill(dbtemp, reshape(db[count:(count + size -
                 1), ], timevar = timevar, idvar = idvar, direction = "wide"))}
         print(paste(count, ":", nrow(dbtemp)))
         count = count + size
@@ -51,13 +52,13 @@ LtoC <- function(x) {as.character(x)}
 #' @export
 
 # debug
-#dirPath="C:/Users/nicol/Dropbox/CSI-LIMNO_DATA"
-#inputFile = "dbInput.xlsx"
-#dirPath=NA
-#startAt = 96
-#append = F
+dirPath="C:/Users/nicol/Dropbox/CSI-LIMNO_DATA"
+inputFile = "dbInput.xlsx"
+startAt = 9
+append = F
+setwd("C:/Users/nicol/Documents/GitHub/dbSurvey")
 
-dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 96,append = F)
+dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append = F)
   {
 
     oriDir=getwd()
@@ -146,7 +147,7 @@ dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 96,append 
                   "dateID"]), LtoC(input[i, "wideVar"]), LtoC(input[i,
                   "wideResults"]))]
             }
-            db = LtoW(db)
+            db = LtoW(db,input,i)
         }
 
 
