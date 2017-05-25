@@ -52,13 +52,14 @@ LtoC <- function(x) {as.character(x)}
 #' @export
 
 # debug
-dirPath="C:/Users/nicol/Dropbox/CSI-LIMNO_DATA"
-inputFile = "dbInput.xlsx"
-startAt = 67
+dirPath="C:/Users/nicol/Dropbox/MSB-2-2015"
+  inputFile = "dbInput_cont.xlsx"
+startAt = 7
 append = F
-setwd("C:/Users/nicol/Documents/GitHub/dbSurvey")
+setwd("C:/Users/nicol/Documents/GitHub/dbExplore")
+lineSkip=0
 
-dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append = F)
+dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append = F,lineSkip=0)
   {
 
     oriDir=getwd()
@@ -67,11 +68,11 @@ dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append =
     input = readxl::read_excel(inputFile, sheet = "dbInput")
 
     #input categories to identified should also be a csv
-    categories = readxl::read_excel("dbInput.xlsx", sheet = "categories")
+    categories = readxl::read_excel(inputFile, sheet = "categories")
     categories=firstAsRowNames(categories)
 
 
-    exclu = readxl::read_excel("dbInput.xlsx", sheet = "exclu", col_names = F)
+    exclu = readxl::read_excel(inputFile, sheet = "exclu", col_names = F)
 
     # decide if you append to an existing input csv or you create a new one
 
@@ -103,41 +104,27 @@ dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append =
 
 
 
-    i = 1
+    i = 2
     # j=1
 
     # if you want to run the loop for a limited number of db starting at x
     if (append) {startAt = nskip + 1}
     # if(!append)startAt=93
-i=57
+i=5
 
     for (i in startAt:nrow(input)) {
       count = 1
       # create the final output table
-      output <- data.frame( ID=numeric(),
-                            path=character(),
-                           state=character(),
-                           category=character(),
-                           varNames=character(),
-                           varDepth=character(),
-                           nbObs=numeric(),
-                           nbLakes=numeric(),
-                           nbDepths=numeric(),
-                           nbYears=numeric(),
-                           startYear=numeric(),
-                           endYear=numeric())
+      output <- output [0,]
+      input=as.data.frame(input)
 
-      output$category=LtoC(output$category)
-      output$path=LtoC(output$path)
-      output$varNames=LtoC(output$varNames)
-      output$varDepth=LtoC(output$varDepth)
-      output$state=LtoC(output$state)
 
       #change working directory
       if(!is.na(dirPath)){setwd(dirPath)}
 
         sheetTemp = do.call(rbind, strsplit(LtoC(input[i, "sheet"]), ";"))
-
+        if(!is.na(sheetTemp)){if(sheetTemp=="NA"){sheetTemp=NA}}
+        lineSkip=input[i, "lineSkip"]
 
         # For xlsx if multiple sheets need to be rbind, sep = ';' and the
         # columns of the first sheet are used in the rbind
@@ -150,17 +137,19 @@ i=57
                   sheet = 1
                 }
                 if (first)
-                  {db = readxl::read_excel(paste("..\\",LtoC(input[i, "path"]),sep=""), sheet = sheet)}
+                  {db = readxl::read_excel(paste("..\\",LtoC(input[i, "path"]),sep=""), sheet = sheet,skip = lineSkip)}
                 if (!first)
                   {db = rbind(db, readxl::read_excel(paste("..\\", LtoC(input[i,
-                    "path"]), sep = ""), sheet = sheet)[, colnames(db)])}
+                    "path"]), sep = ""), sheet = sheet,skip = lineSkip)[, colnames(db)])}
                 first = F
             }
         }
 
         if (input[i, "type"] == "csv")
             {db = read.csv(paste("..\\", LtoC(input[i, "path"]), sep = ""),
-                1, na.strings = c("", "NA"))}
+                1 ,skip = lineSkip,na.strings = c("", "NA"))}
+
+        db=as.data.frame(db)
 
         # long db are trandformed to wide db
         if (!is.na(input[i, "wideVar"])) {
@@ -173,7 +162,7 @@ i=57
                   "dateID"]), LtoC(input[i, "wideVar"]), LtoC(input[i,
                   "wideResults"]))]
             }
-            db = LtoW(db,input,i)
+            db= LtoW(db,input,i)
         }
 
 
@@ -333,11 +322,14 @@ i=57
 
         print(i)
         setwd(oriDir)
+        cnames=gsub(paste(input[i, "wideResults"],".",sep=""), "",colnames(db))
         # need to fix the append component
-        if(i==1){   write.table(output, "output.csv",sep = ",",row.names = F)}
+        if(i==1){
+          write.table(output, "output_cont.csv",sep = ",",row.names = F)
+          write.table(as.matrix(cnames), "variables_cont.csv",sep = ",",row.names = F)}
         if(i!=1){
-        write.table(output, "output.csv", sep = ",", col.names = F, append = T,row.names = F)}
-
+        write.table(output, "output_cont.csv", sep = ",", col.names = F, append = T,row.names = F)}
+        write.table(as.matrix(cnames), "variables_cont.csv", sep = ",", col.names = F, append = T,row.names = F)
         }
 
     #if (append) {output = rbind(outp, output)}
