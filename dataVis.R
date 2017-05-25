@@ -21,6 +21,10 @@ for(i in cat){
   sum[i,"lakes"]=sum(matTemp$nbLakes)
   sum[i,"obs"]=sum(matTemp$nbObs)
 }
+ppi=300
+png("falk_dist.png",width=5*ppi, height=6*ppi,bg="transparent",res=ppi)
+hist(output[output$category=="alkalinity","nbLakes"])
+dev.off()
 
 heatMat=matrix(NA,length(cat),length(states),dimnames=list(cat,states))
 
