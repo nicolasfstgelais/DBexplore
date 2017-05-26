@@ -54,12 +54,13 @@ LtoC <- function(x) {as.character(x)}
 # debug
 dirPath="C:/Users/nicol/Dropbox/MSB-2-2015"
   inputFile = "dbInput_cont.xlsx"
-startAt = 7
+startAt = 1
 append = F
 setwd("C:/Users/nicol/Documents/GitHub/dbExplore")
 lineSkip=0
+lvl="Lvl1"
 
-dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append = F,lineSkip=0)
+dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append = F,lineSkip=0,lvl="Lvl1")
   {
 
     oriDir=getwd()
@@ -68,8 +69,8 @@ dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append =
     input = readxl::read_excel(inputFile, sheet = "dbInput")
 
     #input categories to identified should also be a csv
-    categories = readxl::read_excel(inputFile, sheet = "categories")
-    categories=firstAsRowNames(categories)
+    categories = as.data.frame(readxl::read_excel(inputFile, sheet = "categories"))
+    #categories=firstAsRowNames(categories)
 
 
     exclu = readxl::read_excel(inputFile, sheet = "exclu", col_names = F)
@@ -110,7 +111,7 @@ dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append =
     # if you want to run the loop for a limited number of db starting at x
     if (append) {startAt = nskip + 1}
     # if(!append)startAt=93
-i=5
+i=1
 
     for (i in startAt:nrow(input)) {
       count = 1
@@ -237,13 +238,15 @@ i=5
             db[, dateId] = lubridate::ymd(lubridate::parse_date_time(LtoC(db[, dateId]), orders = "y"))
         }
 
-        j = 2
-        for (j in 1:nrow(categories)) {
+        j = "Alkalinity"
+        selCat=unique(categories[,lvl])
+        j=selCat[2]
+        for (j in selCat) {
 
             # for each category and the associated patterns to look for
-            categTemp = rownames(categories)[j]
-            pattTemp = categories[j, !is.na(categories[j, ])]
-            pattTemp = paste(unlist(pattTemp), collapse = "|")
+            #categTemp = categories[categories[,lvl]==j,lvl]
+            pattTemp = paste(categories[categories[,lvl]==j, "Keywords"], collapse = "|")
+            #pattTemp = paste(unlist(pattTemp), collapse = "|
             pattRem = paste(unlist(exclu), collapse = "|")
             rem = grep(pattern = pattRem, colnames(db), ignore.case = TRUE)
             if (length(rem) > 0){
@@ -254,7 +257,7 @@ i=5
             if (length(colsTemp) == 0) {next}
 
             output[count, "path"] = LtoC(input[i, "path"])
-            output[count, "category"] = categTemp
+            output[count, "category"] = j
             varOut = c("nbObs", "nbLakes", "nbYears", "startYear", "endYear")
             mat = matrix(NA, length(colsTemp), 5, dimnames = list(colnames(db)[colsTemp],
                 varOut))
