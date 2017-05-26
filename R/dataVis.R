@@ -5,7 +5,7 @@ library(fields)
 LtoN <- function(x) as.numeric(as.character(x))
 LtoC <- function(x) as.character(x)
 
-output=read.csv("output.csv")
+output=read.csv("output_cont.csv")
 
 nb=length(unique(output$path))
 cat=unique(output$category)
@@ -21,6 +21,8 @@ for(i in cat){
   sum[i,"lakes"]=sum(matTemp$nbLakes)
   sum[i,"obs"]=sum(matTemp$nbObs)
 }
+
+
 ppi=300
 png("falk_dist.png",width=5*ppi, height=6*ppi,bg="transparent",res=ppi)
 hist(output[output$category=="alkalinity","nbLakes"])
@@ -32,11 +34,15 @@ cat
 states
 j="OH"
 i="hardness"
+
 for(i in cat){
   for(j in states){
-   lgt=length(unique(output[output$state==j,"path"]))
-    var=nrow((output[output$category==i&output$state==j,]))
-    heatMat[i,j]=var/lgt
+    matTemp=output[output$category==i&output$state==j,"nbLakes"]
+   #lgt=length(unique(output[output$state==j,"path"]))
+    #var=nrow((output[output$category==i&output$state==j,]))
+    #heatMat[i,j]=var/lgt
+    if(length(matTemp)==0)matTemp=0
+    heatMat[i,j]=  matTemp
   }
 }
 
