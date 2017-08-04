@@ -13,59 +13,6 @@
 #' @examples
 #' dbSurvey ()
 
-rm(list = ls(all = TRUE))
-#library(readxl)
-#library(lubridate)
-#library(plyr)
-
-# need to work on this function far from optimal -> need input and i
-LtoW <- function(db, input, i,size = 10000)
-  {
-    count = 1
-    while (count < nrow(db)) {
-        if (any(colnames(db) %in% input[i, "Zsample"])) {
-            idvar = c(LtoC(input[i, "stationID"]), LtoC(input[i, "dateID"]),
-                LtoC(input[i, "Zsample"]))
-        } else {
-            idvar = c(LtoC(input[i, "stationID"]), LtoC(input[i, "dateID"]))
-        }
-        timevar = LtoC(input[i, "wideVar"])
-        if (count == 1)
-            {dbtemp = reshape(db[count:(count + size - 1), ], timevar = timevar,
-                idvar = idvar, direction = "wide")}
-        if (count > 1)
-            {dbtemp = plyr::rbind.fill(dbtemp, reshape(db[count:(count + size -
-                1), ], timevar = timevar, idvar = idvar, direction = "wide"))}
-        print(paste(count, ":", nrow(dbtemp)))
-        count = count + size
-    }
-    return(dbtemp)
-}
-
-firstAsRowNames <- function(mat)
-{
-  mat=as.data.frame(mat)
-  rownames(mat) = mat[, 1]
-    mat[, 1] = NULL
-    return(mat)
-}
-
-# function to convert levels to numeric or characters
-LtoN <- function(x) {as.numeric(as.character(x))}
-LtoC <- function(x) {as.character(x)}
-
-# when read empty cells are coded as NAs
-#' @export
-
-# debug
-dirPath="C:/Users/nicol/Dropbox/MSB-2-2015"
-  inputFile = "dbInput_cont.xlsx"
-startAt = 1
-append = F
-setwd("C:/Users/nicol/Documents/GitHub/dbExplore")
-lineSkip=0
-lvl="Lvl1"
-
 dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append = F,lineSkip=0,lvl="Lvl2")
   {
 
@@ -343,4 +290,41 @@ i=1
     #if (append) {output = rbind(outp, output)}
     return(output)
 }
+
+
+# need to work on this function far from optimal -> need input and i
+LtoW <- function(db, input, i,size = 10000)
+{
+  count = 1
+  while (count < nrow(db)) {
+    if (any(colnames(db) %in% input[i, "Zsample"])) {
+      idvar = c(LtoC(input[i, "stationID"]), LtoC(input[i, "dateID"]),
+                LtoC(input[i, "Zsample"]))
+    } else {
+      idvar = c(LtoC(input[i, "stationID"]), LtoC(input[i, "dateID"]))
+    }
+    timevar = LtoC(input[i, "wideVar"])
+    if (count == 1)
+    {dbtemp = reshape(db[count:(count + size - 1), ], timevar = timevar,
+                      idvar = idvar, direction = "wide")}
+    if (count > 1)
+    {dbtemp = plyr::rbind.fill(dbtemp, reshape(db[count:(count + size -
+                                                           1), ], timevar = timevar, idvar = idvar, direction = "wide"))}
+    print(paste(count, ":", nrow(dbtemp)))
+    count = count + size
+  }
+  return(dbtemp)
+}
+
+firstAsRowNames <- function(mat)
+{
+  mat=as.data.frame(mat)
+  rownames(mat) = mat[, 1]
+  mat[, 1] = NULL
+  return(mat)
+}
+
+# function to convert levels to numeric or characters
+LtoN <- function(x) {as.numeric(as.character(x))}
+LtoC <- function(x) {as.character(x)}
 
