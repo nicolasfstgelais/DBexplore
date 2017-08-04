@@ -13,7 +13,7 @@
 #' @examples
 #' dbSurvey ()
 
-dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append = F,lineSkip=0,lvl="Lvl2")
+DBexplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append = F,lineSkip=0,lvl="Lvl2")
   {
 
     oriDir=getwd()
