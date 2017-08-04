@@ -1,7 +1,13 @@
-#' DBsurvey main function
+#' dbExplore main function
 #'
-#' This function allows you to express your love of cats.
-#' @param love Do you love cats? Defaults to TRUE.
+#' This function is designed to explore databases and summarize
+#' the spatial and temporal coverage of pre-selected varaibles (need to fill the input.xls file)
+#' @param inputFile inputFile filename, needs to be in the working directory
+#' @param dirPath   the path to the databases (see input file)
+#' @param startAt at which line to start in input
+#' @param append = F,
+#' @param lineSkip
+#' @param lvl
 #' @keywords cats
 #' @export
 #' @examples
@@ -60,7 +66,7 @@ setwd("C:/Users/nicol/Documents/GitHub/dbExplore")
 lineSkip=0
 lvl="Lvl1"
 
-dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append = F,lineSkip=0,lvl="Lvl1")
+dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append = F,lineSkip=0,lvl="Lvl2")
   {
 
     oriDir=getwd()
@@ -104,7 +110,6 @@ dbExplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append =
     output$state=LtoC(output$state)
 
 
-
     i = 2
     # j=1
 
@@ -138,7 +143,7 @@ i=1
                   sheet = 1
                 }
                 if (first)
-                  {db = readxl::read_excel(paste("..\\",LtoC(input[i, "path"]),sep=""), sheet = sheet,skip = lineSkip)}
+                  {db = readxl::read_excel(paste(".\\",LtoC(input[i, "path"]),sep=""), sheet = sheet,skip = lineSkip)}
                 if (!first)
                   {db = rbind(db, readxl::read_excel(paste("..\\", LtoC(input[i,
                     "path"]), sep = ""), sheet = sheet,skip = lineSkip)[, colnames(db)])}
@@ -147,7 +152,7 @@ i=1
         }
 
         if (input[i, "type"] == "csv")
-            {db = read.csv(paste("..\\", LtoC(input[i, "path"]), sep = ""),
+            {db = read.csv(paste(".\\", LtoC(input[i, "path"]), sep = ""),
                 1 ,skip = lineSkip,na.strings = c("", "NA"))}
 
         db=as.data.frame(db)
