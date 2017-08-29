@@ -16,16 +16,15 @@ i=8
 DBexplore<- function(inputFile = "dbInput_cont.xlsx",dirPath=NA, startAt = 1,append = F,lineSkip=0,lvl="Lvl2")
   {
 
-
     # inputs----
 
     #-oriDir=getwd()
 
     # input a excel, but should eventually be a csv
-    input = read.csv("inputs/dbInput.csv",na.strings = "")
+    input = LtoC(read.csv("inputs/dbInput.csv",na.strings = ""))
 
     #input categories to identified should also be a csv
-    categories = read.csv("inputs/categories.csv")
+    categories = LtoC(read.csv("inputs/categories.csv"))
 
     exclu =  read.csv("inputs/exclu.csv",header=F)
 
@@ -67,7 +66,7 @@ DBexplore<- function(inputFile = "dbInput_cont.xlsx",dirPath=NA, startAt = 1,app
     if (append) {startAt = nskip + 1}
 
 
-i=4
+i=1
     for (i in startAt:nrow(input)) {
       count = 1
 
@@ -79,8 +78,7 @@ i=4
       #change working directory
       #if(!is.na(dirPath)){setwd(dirPath)}
 
-      ## global option
-      options( stringsAsFactors=F )
+
 
         sheetTemp = do.call(rbind, strsplit(LtoC(input[i, "sheet"]), ";"))
         if(!is.na(sheetTemp)){if(sheetTemp=="NA"){sheetTemp=NA}}
@@ -167,19 +165,25 @@ i=4
             stationId = LtoC(input[i, "stationID"])
         }
 
-        dateId = LtoC(input[i, "dateID"])
-
+        dateId=input$dateID[i]
 
         db = db[rowSums(is.na(db)) != ncol(db), ]  #remove columns with only NAs
         db = db[, colSums(is.na(db)) != nrow(db)]  #remove rows with only NAs
         db = db[!is.na(db[, dateId]), ]  #remove rows with only NAs
 
+        db[, dateId]=unlist(strsplit(LtoC(db[, dateId]), " "))
 
-        if (input[i, "dateFormat"] == "B")
-            {db[, dateId] = LtoC(lubridate::ymd(lubridate::parse_date_time(LtoC(db[, dateId]),
-                orders = "mdy")))}
+        tryYMD <- tryCatch(lubridate::ymd(db[, dateId]),error=function(e) e, warning=function(w) w)
+        tryMDY <- tryCatch(lubridate::mdy(db[, dateId]),error=function(e) e, warning=function(w) w)
+        tryDMY <- tryCatch(lubridate::dmy(db[, dateId]),error=function(e) e, warning=function(w) w)
 
-        if (input[i, "dateFormat"] == "C") {
+
+        if(!is( tryYMD ,"warning")){db[, dateId]= tryYMD }
+        if(!is( tryMDY ,"warning")){db[, dateId]= tryMDY }
+        if(!is( tryDMY ,"warning")){db[, dateId]= tryDMY }
+
+
+          if (input[i, "dateFormat"] == "C") {
             db$date2 = NA
             db$date2[grep("/", db[, dateId])] = LtoC(lubridate::ymd(lubridate::parse_date_time(LtoC(db[,
                 dateId][grep("/", db[, dateId])]), orders = "mdy H:M")))
@@ -214,7 +218,8 @@ i=4
         }
 
         j = "Alkalinity"
-        cats=unique(categories[,lvl])
+        lvl="Lvl2"
+        cats=LtoC(unique(categories[,lvl]))
         lvl1=(categories[,"Lvl1"])
 
       #-  j=selCat[1]
@@ -224,7 +229,7 @@ i=4
         c3=1
 
         if(!is.na(input[i, "wideVar"])){
-          searchVec=unique(db[,input$wideVar[i]])
+          searchVec=LtoC(unique(db[,LtoC(input$wideVar[i])]))
         }
         if(is.na(input[i, "wideVar"])){
           searchVec=colnames(db)
@@ -279,13 +284,13 @@ i=4
         if(!is.na(input[i, "wideVar"])){
           pattern=gsub("\\(","\\\\(",paste(parameters$param,collapse="|"))
           pattern=gsub("\\)","\\\\)",pattern)
-          dbSub=db[grep(pattern,db[,input$wideVar[i]],perl=T),]
+          dbSub=db[grep(pattern,db[,LtoC(input$wideVar[i])],perl=T),]
         }
 
         if(is.na(input[i, "wideVar"])){
           pattern=gsub("\\(","\\\\(",paste(parameters$param,collapse="|"))
           pattern=gsub("\\)","\\\\)",pattern)
-          dbSub=db[,c(input$stationID[i],input$dateID[i],grep(pattern,colnames(db),perl=T,value=T)),]
+          dbSub=db[,c(LtoC(input$stationID[i]),LtoC(input$dateID[i]),grep(pattern,colnames(db),perl=T,value=T)),]
           input$wideVar[i]="parameter"
           input$wideResults[i]="value"
           dbSub=tidyr::gather(dbSub,parameter,value,grep(pattern,colnames(dbSub),perl=T),na.rm=T)
@@ -298,23 +303,23 @@ i=4
                 #-stat=input$stationID[i]
                 #-wide=i
 
-               colnames(dbSub)[colnames(dbSub)%in%input$stationID[i]]="stationID"
-               dbSub$year =lubridate::year(dbSub[,input$dateID[i]])
+               colnames(dbSub)[colnames(dbSub)%in%LtoC(input$stationID[i])]="stationID"
+               dbSub$year =lubridate::year(dbSub[,LtoC(input$dateID[i])])
 
 
-               output= as.data.frame(dplyr::summarise(dplyr::group_by_at(dbSub,dplyr::vars(input$wideVar[i])),
+               output= as.data.frame(dplyr::summarise(dplyr::group_by_at(dbSub,dplyr::vars(LtoC(input$wideVar[i]))),
                                                     nObs=sum(dum),
                                                     nbLakes=length(unique(stationID)),
                                                     nbYears=length(unique(year)),
                                                     startYear=min(year),
                                                     endYear=max(year)))
 
-               output=merge(parameters,output,by.y = input$wideVar[i], by.x="param")
+               output=merge(parameters,output,by.y = LtoC(input$wideVar[i]), by.x="param")
 
                #-output$state = input[i, "state"]
                #-output$path = input[i, "path"]
 
-               output=data.frame(path=input[i, "path"],state=input[i, "state"],output)
+               output=data.frame(path=LtoC(input[i, "path"]),state=LtoC(input[i, "state"]),output)
 
 
                 #if (mat[k, "nbLakes"] == 0)
@@ -353,14 +358,14 @@ i=4
 
         #-print(i)
         #-setwd(oriDir)
-      cnames=gsub(paste(input[i, "wideResults"],".",sep=""), "",colnames(db))
+      cnames=gsub(paste(LtoC(input[i, "wideResults"]),".",sep=""), "",colnames(db))
         # need to fix the append component
         if(i==startAt){
           write.table(output, "output/output.csv",sep = ",",row.names = F)
          #- write.table(as.matrix(cnames), "variables_cont.csv",sep = ",",row.names = F)
           }
         if(i!=startAt){
-        write.table(output, "outputoutput.csv", sep = ",", col.names = F, append = T,row.names = F)}
+        write.table(output, "output/output.csv", sep = ",", col.names = F, append = T,row.names = F)}
 #-        write.table(as.matrix(cnames), "variables_cont.csv", sep = ",", col.names = F, append = T,row.names = F)
         }
 
@@ -403,5 +408,12 @@ firstAsRowNames <- function(mat)
 
 # function to convert levels to numeric or characters
 LtoN <- function(x) {as.numeric(as.character(x))}
-LtoC <- function(x) {as.character(x)}
+LtoC <- function(x) {
+  if(!is.null(dim(x))){
+    for (i in 1:ncol(x)){
+      if(class(x[,i])=="factor")x[,i]=as.character(x[,i])}
+    }
+  if(is.null(dim(x))){x=as.character(x)}
+  return(x)
+  }
 
