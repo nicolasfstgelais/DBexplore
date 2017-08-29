@@ -1,0 +1,216 @@
+---
+title: "Report_dbExplore"
+output: 
+    pdf_document:
+
+#classoption: landscape
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.path='figures/',
+                      echo=TRUE, warning=FALSE, message=FALSE)
+```
+
+
+```{r functions,echo=F}
+# function to convert levels to numeric or characters
+LtoN <- function(x) as.numeric(as.character(x))
+LtoC <- function(x) as.character(x)
+```
+
+```{r import, echo=F}
+output=read.csv("output_cont.csv")
+
+nb=length(unique(output$path))
+cat=unique(output$category)
+states=unique(output$state)
+
+library(plyr)
+
+#matTemp=ddply(output,"category",summarise,
+      #frequency=length(nbYears)/nb,
+      #years=median(nbYears),
+      #depths=mean(nbDepths),
+      #lakes=sum(nbLakes),
+      #obs=sum(nbObs))
+
+catSum=ddply(output,c("category","lvl2","lvl1","state"),summarise,
+              frequency=length(unique(lvl1))/nb,
+              years=median(nbYears),
+              depths=mean(nbDepths),
+              lakes=sum(nbLakes),
+              obs=sum(nbObs))
+
+lvl2Sum=ddply(catSum,c("lvl1","state"),summarise,
+              frequency=max(frequency),
+              years=max(years),
+              depths=max(depths),
+              lakes=max(lakes),
+              obs=max(obs))
+
+
+
+library(tidyr)
+heatMat <- spread(lvl2Sum[,c("lvl1","state","lakes")], state, lakes)
+rownames(heatMat)=heatMat$lvl1;heatMat$lvl1=NULL
+
+heatMat=heatMat[order(rowSums(heatMat),decreasing = T),]
+
+
+```
+## Number of lakes
+
+```{r heatmap,fig.width=8, fig.height=7, echo=FALSE,fig.pos = 'p'}
+library(plotrix)
+par(mar = c(0, 10, 4, 0))
+#par(mar = c(0.5, 4, 3.5, 0.5))
+color2D.matplot(heatMat,
+                show.values = TRUE,
+                axes = F,
+                xlab = "",
+                ylab = "",
+                vcex = 1,
+                vcol = "black",
+                extremes = c("white", "red"))
+
+axis(3, at = seq_len(ncol(heatMat)) - 0.5,
+     labels = colnames(heatMat), tick = FALSE, cex.axis = 1,las=2)
+
+axis(2, at = seq_len(nrow(heatMat)) -0.5,
+     labels = rev(rownames(heatMat)), tick = FALSE, las = 1, cex.axis = 1)
+
+
+```
+
+```{r , echo=F}
+
+catSub=catSum[catSum$lvl2=="Contaminants-Inorganic",]
+catSub=ddply(catSub,c("category","state"),summarise,
+              frequency=max(frequency),
+              years=max(years),
+              depths=max(depths),
+              lakes=max(lakes),
+              obs=max(obs))
+
+
+
+library(tidyr)
+heatMat <- spread(catSub[,c("category","state","lakes")], state, lakes)
+rownames(heatMat)=heatMat$category;heatMat$category=NULL
+
+heatMat=heatMat[order(rowSums(heatMat),decreasing = T),]
+
+
+```
+
+## Inorganic contaminants
+
+```{r heatmap2,fig.width=8, fig.height=7, echo=FALSE,fig.pos = 'p'}
+library(plotrix)
+par(mar = c(0, 10, 4, 0))
+#par(mar = c(0.5, 4, 3.5, 0.5))
+color2D.matplot(heatMat,
+                show.values = TRUE,
+                axes = F,
+                xlab = "",
+                ylab = "",
+                vcex = 1,
+                vcol = "black",
+                extremes = c("white", "red"))
+
+axis(3, at = seq_len(ncol(heatMat)) - 0.5,
+     labels = colnames(heatMat), tick = FALSE, cex.axis = 1,las=2)
+
+axis(2, at = seq_len(nrow(heatMat)) -0.5,
+     labels = rev(rownames(heatMat)), tick = FALSE, las = 1, cex.axis = 1)
+
+
+```
+
+```{r inorg years , echo=F}
+
+catSub=catSum[catSum$lvl2=="Contaminants-Inorganic",]
+catSub=ddply(catSub,c("category","state"),summarise,
+              frequency=max(frequency),
+              years=max(years),
+              depths=max(depths),
+              lakes=max(lakes),
+              obs=max(obs))
+
+
+
+library(tidyr)
+heatMat <- spread(catSub[,c("category","state","years")], state, years)
+rownames(heatMat)=heatMat$category;heatMat$category=NULL
+
+heatMat=heatMat[order(rowSums(heatMat),decreasing = T),]
+
+
+```
+
+```{r heatmap2.5,fig.width=8, fig.height=7, echo=FALSE,fig.pos = 'p'}
+library(plotrix)
+par(mar = c(0, 10, 4, 0))
+#par(mar = c(0.5, 4, 3.5, 0.5))
+color2D.matplot(heatMat,
+                show.values = TRUE,
+                axes = F,
+                xlab = "",
+                ylab = "",
+                vcex = 1,
+                vcol = "black",
+                extremes = c("white", "red"))
+
+axis(3, at = seq_len(ncol(heatMat)) - 0.5,
+     labels = colnames(heatMat), tick = FALSE, cex.axis = 1,las=2)
+
+axis(2, at = seq_len(nrow(heatMat)) -0.5,
+     labels = rev(rownames(heatMat)), tick = FALSE, las = 1, cex.axis = 1)
+
+
+```
+
+```{r , echo=F}
+
+catSub=catSum[catSum$lvl1=="ions",]
+catSub=ddply(catSub,c("category","state"),summarise,
+              frequency=max(frequency),
+              years=max(years),
+              depths=max(depths),
+              lakes=max(lakes),
+              obs=max(obs))
+
+
+
+library(tidyr)
+heatMat <- spread(catSub[,c("category","state","lakes")], state, lakes)
+rownames(heatMat)=heatMat$category;heatMat$category=NULL
+
+heatMat=heatMat[order(rowSums(heatMat),decreasing = T),]
+
+
+```
+
+## Ions
+
+```{r heatmap3,fig.width=8, fig.height=7, echo=FALSE,fig.pos = 'p'}
+library(plotrix)
+par(mar = c(0, 10, 4, 0))
+#par(mar = c(0.5, 4, 3.5, 0.5))
+color2D.matplot(heatMat,
+                show.values = TRUE,
+                axes = F,
+                xlab = "",
+                ylab = "",
+                vcex = 1,
+                vcol = "black",
+                extremes = c("white", "red"))
+
+axis(3, at = seq_len(ncol(heatMat)) - 0.5,
+     labels = colnames(heatMat), tick = FALSE, cex.axis = 1,las=2)
+
+axis(2, at = seq_len(nrow(heatMat)) -0.5,
+     labels = rev(rownames(heatMat)), tick = FALSE, las = 1, cex.axis = 1)
+
+
+```

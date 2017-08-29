@@ -1,0 +1,121 @@
+Lvl1,Lvl2,Keywords
+Alkalinity,Alkalinity,"Alkalinity|Acid neutralizing capacity|Alkalinity, total|Alkalinity, carbonate|CaCO3|bANC\b"
+Alkalinity,"Alkalinity, bicarbonate","Alkalinity, bicarbonate"
+Contaminant,Atrazine,Atrazine
+Carbon,"Carbon, dissolved organic","Carbon, dissolved organic"
+Carbon,"Carbon, dissolved inorganic","Carbon, dissolved inorganic|\bDIC\b|_DIC\b|CARBON DIOXIDE"
+Carbon,"Carbon, total inorganic","Carbon, total inorganic"
+Carbon,"Carbon, total organic","Carbon, total organic"
+Chla,Chlorophyll a,Chlorophyll|\bChla\b|Algal Growth 
+Chla,Chlorophyll a,Chlorophyll a|Chlorophyll (a+b+c)|Chlorophyll a corrected for phaeophytin|\bChla\b
+Chla,"Chlorophyll a, uncorrected for pheophytin","Chlorophyll a, uncorrected for pheophytin"
+Color,"Color, apparent","Color, apparent"
+Color,"Color, true","Color, true|Color, true spec"
+Toxin,toxin concentrations,Cyanobacteria or toxin concentrations (microcystin ect.)|Microcystin
+Contaminant-fecal,E. coli,E. coli
+Nitrogen,"Nitrogen, nitrite (NO2) + nitrate (NO3)","Nitrate (NO3)|Nitrogen, nitrite (NO2) + nitrate (NO3)|Nitrogen, dissolved nitrate (NO3)|Nitrogen, dissolved nitrate (NO3)|Nitrogen, dissolved nitrite (NO2) + Nitrate (NO3)"
+Nitrogen,"Nitrogen, NH4","Nitrogen, NH4 "
+Nitrogen,"Nitrogen, NH3","Nitrogen, NH3|Nitrogen, NH3 total"
+Nitrogen,"Nitrogen, total","Nitrogen, total"
+Nitrogen,"Nitrogen, total Kjeldahl","Nitrogen, total Kjeldahl"
+Nitrogen,"Nitrogen, dissolved Kjeldahl","Nitrogen, dissolved Kjeldahl"
+Nitrogen,"Nitrogen, NO2","Nitrogen, nitrite (NO2)"
+Nitrogen,"Nitrogen, total dissolved","Nitrogen, total dissolved"
+Nitrogen,"Nitrogen, total organic","Nitrogen, total organic"
+Oxygen,"Oxygen, dissolved","Oxygen, dissolved|OXYGEN|\bdo\b|\bO2\b|\bdo_"
+pH,pH,\bph\b|\bph_
+pH,"pH, closed","pH, closed"
+Phosphorus,"Phosphorus, total","Phosphorus, total "
+Phosphorus,"Phosphorus, soluable reactive orthophosphate","Phosphorus, soluable reactive orthophosphate|Phosphorus, soluble reactive|Phosphoru, orthophosphate"
+Phosphorus,"Phosphorus, total dissolved","Phosphorus, total dissolved"
+Secchi,Secchi,Secchi
+Temperature,Temperature,Temperature
+Turbidity,Turbidity,Turbidity
+Temperature,Temperature,Temperature
+Conductivity,Conductivity,"Conductivity|Conductance, specific|SPC"
+Solids,"Solids, total suspended","Solids, total suspended"
+Solids,"Solids, total disolved","Total Dissolved Solids|SOLIDS, DISSOLVED"
+Salinity,Salinity,Salinity
+Ion,\bChloride,Chloride
+Ion,Silica,Silica
+Ion,Sodium,Sodium
+Ion,Potassium,Potassium
+Ion,Magnesium,Magnesium
+Ion,Calcium,Calcium
+ion,hardness,Hardness|\bhard
+Contaminants-Inorganic,dissolved mercury,"Mercury, dissolved"
+Contaminants-Inorganic,total mercury,"Mercury, total"
+Contaminants-Inorganic,Methylmercury,Methylmercury
+Contaminants-Inorganic,Mercury,Mercury|HG
+Contaminants-Inorganic,Aluminum,Aluminum
+Contaminants-Inorganic,Lead,Lead
+Contaminants-Inorganic,Cadmium,Cadmium
+Contaminants-Inorganic,Selenium,Selenium
+Contaminants-Inorganic,Thallium,Thallium
+Contaminants-Inorganic,Nickel,Nickel
+Contaminants-Inorganic,Silver,Silver
+Contaminants-Inorganic,Manganese,Manganese|mn
+Contaminants-Inorganic,Chromium,Chromium
+Contaminants-Inorganic,Barium,Barium
+Contaminants-Inorganic,Zinc,Zinc
+Contaminants-Inorganic,Iron,Iron
+Contaminants-Inorganic,Antimony,Antimony
+Contaminants-Inorganic,Arsenic,Arsenic
+Contaminants-Inorganic,Asbestos,Asbestos
+Contaminants-Inorganic,Beryllium,Beryllium
+Contaminants-Inorganic,Chromium,Chromium
+Contaminants-Inorganic,Copper,Copper
+Contaminants-Inorganic,Cyanide,Cyanide
+Contaminants-Inorganic,Fluoride,Fluoride
+Contaminants-Inorganic,Lead,Lead
+Contaminants-Inorganic,Thallium,Thallium
+Contaminants-Inorganic,DDMU,DDMU
+Contaminants-Inorganic,Lead,Lead
+Contaminants-Inorganic,Fluorene,Fluorene
+Contaminants-Organic,Acrylamide,Acrylamide
+Contaminants-Organic,Dioxin,Dioxin
+Contaminants-Organic,Atrazine,Atrazine
+Contaminants-Organic,Diquat,Diquat
+Contaminants-Organic,Heptachlor,Heptachlor
+Contaminants-Organic,Hexachloro,Hexachloro
+Contaminants-Organic,Lindane,Lindane
+Contaminants-Organic,Methoxychlor,Methoxychlor
+Contaminants-Organic,Oxamyl,Oxamyl
+Contaminants-Organic,Vydate,Vydate
+Contaminants-Organic,PCB,PCB
+Contaminants-Organic,Pentachlorophenol,Pentachlorophenol
+Contaminants-Organic,Picloram,Picloram
+Contaminants-Organic,Simazine,Simazine
+Contaminants-Organic,Styrene,Styrene
+Contaminants-Organic,Tetrachloroethylene,Tetrachloroethylene
+Contaminants-Organic,Toluene,Toluene
+Contaminants-Organic,Toxaphene,Toxaphene
+Contaminants-Organic,Silvex,Silvex
+Contaminants-Organic,Trichloro,Trichloro
+Contaminants-Organic,Vinyl chloride,Vinyl chloride
+Contaminants-Organic,Xylenes,Xylenes
+Contaminants-Organic,Endothall,Endothall
+Contaminants-Organic,Endrin,Endrin
+Contaminants-Organic,Epichlorohydrin,Epichlorohydrin
+Contaminants-Organic,Ethylbenzene,Ethylbenzene
+Contaminants-Organic,Ethylene,Ethylene
+Contaminants-Organic,Glyphosate,Glyphosate
+Contaminants-Organic,Alachlor,Alachlor
+Contaminants-Organic,Benzene,benzo|Benzene
+Contaminants-Organic,PAH,PAH
+Contaminants-Organic,"2,4D","2,4D"
+Contaminants-Organic,Carbofuran,Carbofuran
+Contaminants-Organic,Carbon tetrachloride,Carbon tetrachloride
+Contaminants-Organic,Chlordane,Chlordane
+Contaminants-Organic,PBDE,PBDE
+Contaminants-Organic,Chlorobenzene,Chlorobenzene
+Contaminants-Organic,Dalapon,Dalapon
+Contaminants-Organic,chloropropane,chloropropane
+Contaminants-Organic,Dichlorobenzene,Dichlorobenzene
+Contaminants-Organic,Dichloroethane,Dichloroethane
+Contaminants-Organic,Dichloromethane,Dichloromethane
+Contaminants-Organic,Dichloropropane,Dichloropropane
+Contaminants-Organic,Dichloroethylene,Dichloroethylene
+Contaminants-Organic,adipate,adipate
+Contaminants-Organic,phthalate,phthalate
+Contaminants-Organic,Dinoseb,Dinoseb

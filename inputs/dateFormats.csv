@@ -1,0 +1,6 @@
+dateFormat,Format,sep,
+A,ymd,-,
+B,mdy,/,
+C,mdy H:M,,Dual 
+D,mdy,,Dual 
+E,ymd,20011225,

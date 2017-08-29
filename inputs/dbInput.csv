@@ -1,0 +1,11 @@
+path,state,type,sheet,stationID,dateID,Zsample,dateFormat,wideVar,wideResults,NAvalue,transpose,Notes,lineSkip
+Data\CA\CA-Lakes_WQdata_fromCEDEN_05-03-17.xlsx,CA,xls,,StationName,SampleDate,CollectionDepth,A,Analyte,Result,,,,2
+Data\FL\FDEP_WM_NSFData.xlsx,FL,xls,Mich_File02,WATERBODY_NAME,COLLECTION_DATE,SAMPLE_DEPTH,A,PARAMETER,VALUE,,,,0
+Data\KS\Michigan State - Poisson.xlsx,KS,xls,SiteChem,Site Name,Collection Date,Depth,A,,,,,,0
+Data\NH\NH_limno17.csv,NH,csv,,Waterbody.Name,Start.Date,,B,Parameter,Qualifer.and.Results,,,,0
+Data\NV\NormalizedData.csv,NV,csv,,WATERBODYNAME,SAMPLEDATETIME,SAMPLEDEPTH,A,CHARACTERISTICNAME,RESULTMEASURE,,,,0
+Data\OR\OR LakesResultLASAR.xlsx,OR,xls,,Station Identifier,Sample Date Time,,A,,,,,,0
+Data\SD\ChemistryResults_test.xlsx,SD,xls,,StationID,SampleDateOnly,DepthToActivity_m,A,FldName,ResultValue,,,,0
+Data\TX\tblCombEventsResultsAfter1975ReservoirParametersRT.xlsx,TX,xls,,Station ID,End Date,End Depth,A,Parameter Description,Value,,,,0
+Data\VA\VADEQ_CEDSWQM_DATA&DICTIONARY_20170404.xlsx,VA,xls,ALLPARM,FDT_STA_ID,FDT_DATE_TIME,,A,,,,,,0
+Data\WV\WVLakes_nonprofile.xlsx,WV,xls,,WATERBODY_NAME,SAMPLE_DATE,DEPTH,A,PARAMETER,WQ_value,,,,0
