@@ -12,76 +12,95 @@
 #' @export
 #' @examples
 #' dbSurvey ()
-
-DBexplore<- function(inputFile = "dbInput.xlsx",dirPath=NA, startAt = 1,append = F,lineSkip=0,lvl="Lvl2")
+i=8
+DBexplore<- function(inputFile = "dbInput_cont.xlsx",dirPath=NA, startAt = 1,append = F,lineSkip=0,lvl="Lvl2")
   {
 
-    oriDir=getwd()
+
+    # inputs----
+
+    #-oriDir=getwd()
 
     # input a excel, but should eventually be a csv
-    input = readxl::read_excel(inputFile, sheet = "dbInput")
+    input = read.csv("inputs/dbInput.csv",na.strings = "")
 
     #input categories to identified should also be a csv
-    categories = as.data.frame(readxl::read_excel(inputFile, sheet = "categories"))
-    #categories=firstAsRowNames(categories)
+    categories = read.csv("inputs/categories.csv")
+
+    exclu =  read.csv("inputs/exclu.csv",header=F)
 
 
-    exclu = readxl::read_excel(inputFile, sheet = "exclu", col_names = F)
+    # create the final output file and table----
 
     # decide if you append to an existing input csv or you create a new one
-
     if (append) {
-        outp = read.csv("output.csv", row.names = 1)
-        nskip = length(unique(outp[, 2]))
+      outp = read.csv("output.csv", row.names = 1)
+      nskip = length(unique(outp[, 2]))
     } else {
-        nskip = 0
+      nskip = 0
     }
 
-    # create the final output table
-    output <- data.frame(path=character(),
-                         state=character(),
-                         category=character(),
-                         varNames=character(),
-                         varDepth=character(),
-                         nbObs=numeric(),
-                         nbLakes=numeric(),
-                         nbDepths=numeric(),
-                         nbYears=numeric(),
-                         startYear=numeric(),
-                         endYear=numeric())
 
-    output$category=LtoC(output$category)
-    output$path=LtoC(output$path)
-    output$varNames=LtoC(output$varNames)
-    output$varDepth=LtoC(output$varDepth)
-    output$state=LtoC(output$state)
+    #-output <- data.frame(path=character(),
+      #-                   state=character(),
+        #-                 category=character(),
+          #-               year=numeric(),
+            #-             lvl1=character(),
+              #-           varNames=character(),
+                #-         varDepth=character(),
+                  #-       nbObs=numeric(),
+                    #-     nbLakes=numeric(),
+                      #-   nbDepths=numeric(),
+                        #- nbYears=numeric(),
+                         #-startYear=numeric(),
+                         #-endYear=numeric())
 
+   #- output$category=LtoC(output$category)
+    #-output$lvl1=LtoC(output$lvl1)
+    #-output$path=LtoC(output$path)
+    #-output$varNames=LtoC(output$varNames)
+    #-output$varDepth=LtoC(output$varDepth)
+    #-output$state=LtoC(output$state)
 
-    i = 2
-    # j=1
 
     # if you want to run the loop for a limited number of db starting at x
     if (append) {startAt = nskip + 1}
-    # if(!append)startAt=93
-i=1
 
+
+i=4
     for (i in startAt:nrow(input)) {
       count = 1
+
       # create the final output table
-      output <- output [0,]
-      input=as.data.frame(input)
+      #-output <- output [0,]
+      #input=as.data.frame(input)
 
 
       #change working directory
-      if(!is.na(dirPath)){setwd(dirPath)}
+      #if(!is.na(dirPath)){setwd(dirPath)}
+
+      ## global option
+      options( stringsAsFactors=F )
 
         sheetTemp = do.call(rbind, strsplit(LtoC(input[i, "sheet"]), ";"))
         if(!is.na(sheetTemp)){if(sheetTemp=="NA"){sheetTemp=NA}}
         lineSkip=input[i, "lineSkip"]
 
+        if(length(grep("csv",LtoC(input[i, "path"])))!=0){fileType="csv"}
+        if(length(grep("xl",LtoC(input[i, "path"])))!=0){fileType="xls"}
+
         # For xlsx if multiple sheets need to be rbind, sep = ';' and the
         # columns of the first sheet are used in the rbind
-        if (input[i, "type"] == "xls") {
+        # time the loop
+
+        #log input
+        fileName=paste0("logs/",as.character(Sys.Date()),".log")
+        cat(as.character(Sys.time()), file=fileName, append=T, sep = "\n")
+
+
+        time=gsub(" EDT","",gsub(" ","_",Sys.time()))
+
+        if (fileType == "xls") {
             first = T
             for (w in sheetTemp) {
                 if (!is.na(w)) {
@@ -90,33 +109,37 @@ i=1
                   sheet = 1
                 }
                 if (first)
-                  {db = readxl::read_excel(paste(".\\",LtoC(input[i, "path"]),sep=""), sheet = sheet,skip = lineSkip)}
+                {
+
+                db = readxl::read_excel(paste(dirPath,"/",LtoC(input[i, "path"]),sep=""), sheet = sheet,skip = lineSkip)}
                 if (!first)
-                  {db = rbind(db, readxl::read_excel(paste("..\\", LtoC(input[i,
+                  {db = rbind(db, readxl::read_excel(paste(dirPath,"/", LtoC(input[i,
                     "path"]), sep = ""), sheet = sheet,skip = lineSkip)[, colnames(db)])}
                 first = F
             }
         }
 
-        if (input[i, "type"] == "csv")
-            {db = read.csv(paste(".\\", LtoC(input[i, "path"]), sep = ""),
+        if (fileType == "csv")
+            {db = read.csv(paste(dirPath,"/", LtoC(input[i, "path"]), sep = ""),
                 1 ,skip = lineSkip,na.strings = c("", "NA"))}
 
         db=as.data.frame(db)
 
-        # long db are trandformed to wide db
-        if (!is.na(input[i, "wideVar"])) {
-            if (!is.na(input[i, "Zsample"])) {
-                db = db[, c(LtoC(input[i, "stationID"]), LtoC(input[i,
-                  "dateID"]), LtoC(input[i, "wideVar"]), LtoC(input[i,
-                  "Zsample"]), LtoC(input[i, "wideResults"]))]
-            } else {
-                db = db[, c(LtoC(input[i, "stationID"]), LtoC(input[i,
-                  "dateID"]), LtoC(input[i, "wideVar"]), LtoC(input[i,
-                  "wideResults"]))]
-            }
-            db= LtoW(db,input,i)
-        }
+
+
+        #if (!is.na(input[i, "wideVar"])) {
+         #   if (!is.na(input[i, "Zsample"])) {
+
+          #      db = db[rowSel, c(LtoC(input[i, "stationID"]), LtoC(input[i,
+           #       "dateID"]), LtoC(input[i, "wideVar"]), LtoC(input[i,
+            #      "Zsample"]), LtoC(input[i, "wideResults"]))]
+            #} else {
+             #   db = db[rowSel, c(LtoC(input[i, "stationID"]), LtoC(input[i,
+              #    "dateID"]), LtoC(input[i, "wideVar"]), LtoC(input[i,
+               #   "wideResults"]))]
+            #}
+            #db= LtoW(db,input,i)
+        #}
 
 
         # if(!is.na(input[i,'wideVar'])){
@@ -125,8 +148,8 @@ i=1
         # c(LtoC(input[i,'stationID']),LtoC(input[i,'dateID'])),direction =
         # 'wide') }
 
-        if (!is.na(input[i, "NA"]))
-            {db[db == input[i, "NA"][[1]]] = NA}
+        if (!is.na(input[i, "NAvalue"]))
+            {db[db == input[i, "NAvalue"][[1]]] = NA}
 
         Zsample = LtoC(input[i, "Zsample"])
         if (is.na(Zsample)) {
@@ -191,100 +214,154 @@ i=1
         }
 
         j = "Alkalinity"
-        selCat=unique(categories[,lvl])
-        j=selCat[2]
-        for (j in selCat) {
+        cats=unique(categories[,lvl])
+        lvl1=(categories[,"Lvl1"])
 
-            # for each category and the associated patterns to look for
-            #categTemp = categories[categories[,lvl]==j,lvl]
+      #-  j=selCat[1]
+        c2=1
+        parameters=data.frame(param=NA,ctrl=NA,KeyW=NA)
+        #params=unique(db[,input$wideVar[i]])
+        c3=1
+
+        if(!is.na(input[i, "wideVar"])){
+          searchVec=unique(db[,input$wideVar[i]])
+        }
+        if(is.na(input[i, "wideVar"])){
+          searchVec=colnames(db)
+        }
+
+
+      for (j in cats) {
+            # loop to search for the kerwords in order, maybe switch from | to  ; between keywords
+
+            # create a list of pattern to look for
             pattTemp = paste(categories[categories[,lvl]==j, "Keywords"], collapse = "|")
-            #pattTemp = paste(unlist(pattTemp), collapse = "|
-            pattRem = paste(unlist(exclu), collapse = "|")
-            rem = grep(pattern = pattRem, colnames(db), ignore.case = TRUE)
-            if (length(rem) > 0){
-                colsTemp = grep(pattern = pattTemp, colnames(db)[-rem],
-                  ignore.case = TRUE)} else {
-                colsTemp = grep(pattern = pattTemp, colnames(db), ignore.case = TRUE)
+            pattTemp = gsub("\\|",";",pattTemp)
+            pattList=unlist(strsplit(pattTemp,";"))
+
+            # loop to look for patterns, first before
+            colsTemp=NULL
+            for(r in 1:length(pattList))
+            {
+              colsTemp = grep(pattern = pattList[r], searchVec , ignore.case = TRUE)
+              if(length(colsTemp)>0){break}
             }
-            if (length(colsTemp) == 0) {next}
 
-            output[count, "path"] = LtoC(input[i, "path"])
-            output[count, "category"] = j
-            varOut = c("nbObs", "nbLakes", "nbYears", "startYear", "endYear")
-            mat = matrix(NA, length(colsTemp), 5, dimnames = list(colnames(db)[colsTemp],
-                varOut))
+            if (length(colsTemp) == 0) {c2=c2+1;next}
 
-            tempZ = NA
-            c = 1
-            for (k in colnames(db)[colsTemp]) {
+            # store params name, category and keyword in params
+            parameters[c3,"param"]=searchVec[colsTemp[1]]
+            parameters[c3,"KeyW"]=pattList[r]
+            parameters[c3,"ctrl"]=j
+            c3=c3+1
 
-                # LtoC(db[!is.na(db[,k]),input[i,'Zsample']])
-                #db[!is.na(db[, k]), ]
-              # problem with tibble
-                db=as.data.frame(db)
+            #log names
+            cat(paste("\t",j,":",pattList[r]), file=fileName, append=T, sep = "\n")
+            cat(paste("\t\t",searchVec[colsTemp]), file=fileName, append=T, sep = "\n")
+        }
 
-                mat[k, "nbObs"] = nrow(db[!is.na(db[, k]), ])
-                mat[k, "nbLakes"] = length(unique(LtoC(db[!is.na(db[, k]),
-                  stationId])))
-                mat[k, "nbYears"] = length(unique(lubridate::year(((db[!is.na(db[,
-                  k]), dateId])))))
-                mat[k, "startYear"] = min(lubridate::year((db[!is.na(db[, k]),
-                  dateId])), na.rm = T)
-                mat[k, "endYear"] = max(lubridate::year((db[!is.na(db[, k]), dateId])),
-                  na.rm = T)
-                if (mat[k, "nbLakes"] == 0)
-                 { mat[k, "nbLakes"] = 1}
 
-                tempMat = db[!is.na(db[, k]), ]
-                tempMat$uniM = paste(tempMat[, stationId], tempMat[, dateId],
-                  sep = ":")
+            #-output[count, "path"] = LtoC(input[i, "path"])
+            #-output[count, "category"] = as.character(j)
+            #-output[count, "lvl1"] =  as.character(lvl1[c2])
+
+            #-c2=c2+1
+
+
+
+            #-kw.colap=paste(parameters$KeyW,collapse = "|")
+            #-rowSel=grep(kw.colap,LtoC(db[,LtoC(input[i, "wideVar"])]),ignore.case = TRUE,perl = T)
+
+            #add a dummy row
+
+
+
+        if(!is.na(input[i, "wideVar"])){
+          pattern=gsub("\\(","\\\\(",paste(parameters$param,collapse="|"))
+          pattern=gsub("\\)","\\\\)",pattern)
+          dbSub=db[grep(pattern,db[,input$wideVar[i]],perl=T),]
+        }
+
+        if(is.na(input[i, "wideVar"])){
+          pattern=gsub("\\(","\\\\(",paste(parameters$param,collapse="|"))
+          pattern=gsub("\\)","\\\\)",pattern)
+          dbSub=db[,c(input$stationID[i],input$dateID[i],grep(pattern,colnames(db),perl=T,value=T)),]
+          input$wideVar[i]="parameter"
+          input$wideResults[i]="value"
+          dbSub=tidyr::gather(dbSub,parameter,value,grep(pattern,colnames(dbSub),perl=T),na.rm=T)
+        }
+
+                dbSub$dum=1
+
+                #-inputSub=db[rowSel,]
+
+                #-stat=input$stationID[i]
+                #-wide=i
+
+               colnames(dbSub)[colnames(dbSub)%in%input$stationID[i]]="stationID"
+               dbSub$year =lubridate::year(dbSub[,input$dateID[i]])
+
+
+               output= as.data.frame(dplyr::summarise(dplyr::group_by_at(dbSub,dplyr::vars(input$wideVar[i])),
+                                                    nObs=sum(dum),
+                                                    nbLakes=length(unique(stationID)),
+                                                    nbYears=length(unique(year)),
+                                                    startYear=min(year),
+                                                    endYear=max(year)))
+
+               output=merge(parameters,output,by.y = input$wideVar[i], by.x="param")
+
+               #-output$state = input[i, "state"]
+               #-output$path = input[i, "path"]
+
+               output=data.frame(path=input[i, "path"],state=input[i, "state"],output)
+
+
+                #if (mat[k, "nbLakes"] == 0)
+                # { mat[k, "nbLakes"] = 1}
+
+                #-tempMat$uniM = paste(tempMat[, stationId], tempMat[, dateId],
+                  #-sep = ":")
 
                 # calcule the number of unique depth for one lake at one depth then
                 # average for the database limit the estimate of depths if not will
                 # take forever
-                if (!is.na(Zsample)) {
-                  for (h in tempMat$uniM) {
-                    tempZ[c] = length(unique(tempMat[tempMat$uniM == h,
-                      Zsample]))
-                    c = c + 1
-                    if (c > 100)
-                      {break}
-                  }
-                }
-            }
+                #if (!is.na(Zsample)) {
+                 #for (h in tempMat$uniM) {
+                    #tempZ[c] = length(unique(tempMat[tempMat$uniM == h,
+                    #Zsample]))
+                    #c = c + 1
+                   # if (c > 100)
+                  #    {break}
+                 # }
+                #}
+            #-}
 
-            if (nrow(mat) > 1)
-                {mat = mat[order(mat[, "nbObs"], decreasing = T), ]}
-            output[count, "nbObs"] = mat[1, "nbObs"]
-            output[count, "nbLakes"] = mat[1, "nbLakes"]
-            output[count, "nbYears"] = mat[1, "nbYears"]
-            output[count, "startYear"] = mat[1, "startYear"]
-            output[count, "endYear"] = mat[1, "endYear"]
-            output[count, "endYear"] = mat[1, "endYear"]
-            output[count, "state"] = input[i, "state"]
-            if (!is.na(Zsample)) {
-               { output[count, "nbDepths"] = mean(tempZ)}
-            } else {
-                output[count, "nbDepths"] = 1
-            }
 
-            output[count, "varNames"] = paste(unlist(rownames(mat)), collapse = "; ")
-            output[count, "varDepth"] = Zsample
-            output[count, "ID"]=i
+           # if (!is.na(Zsample)) {
+            #   { output[count, "nbDepths"] = mean(tempZ)}
+            #} else {
+             #   output[count, "nbDepths"] = 1
+            #}
 
-            count = count + 1
-        }
+            #output[count, "varNames"] = paste(unlist(rownames(mat)), collapse = "; ")
+            #output[count, "varDepth"] = Zsample
+            #output[count, "ID"]=i
 
-        print(i)
-        setwd(oriDir)
-        cnames=gsub(paste(input[i, "wideResults"],".",sep=""), "",colnames(db))
+            #-count = count + 1
+        #-}
+
+        #-print(i)
+        #-setwd(oriDir)
+      cnames=gsub(paste(input[i, "wideResults"],".",sep=""), "",colnames(db))
         # need to fix the append component
-        if(i==1){
-          write.table(output, "output_cont.csv",sep = ",",row.names = F)
-          write.table(as.matrix(cnames), "variables_cont.csv",sep = ",",row.names = F)}
-        if(i!=1){
-        write.table(output, "output_cont.csv", sep = ",", col.names = F, append = T,row.names = F)}
-        write.table(as.matrix(cnames), "variables_cont.csv", sep = ",", col.names = F, append = T,row.names = F)
+        if(i==startAt){
+          write.table(output, "output/output.csv",sep = ",",row.names = F)
+         #- write.table(as.matrix(cnames), "variables_cont.csv",sep = ",",row.names = F)
+          }
+        if(i!=startAt){
+        write.table(output, "outputoutput.csv", sep = ",", col.names = F, append = T,row.names = F)}
+#-        write.table(as.matrix(cnames), "variables_cont.csv", sep = ",", col.names = F, append = T,row.names = F)
         }
 
     #if (append) {output = rbind(outp, output)}
